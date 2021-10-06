@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Raleway:wght@300;500;700&display=swap');
+
+#customers {
+    font-family: Montserrat;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: rgb(107, 143, 208);
+    color: rgb(209, 228, 239);
+}
+
+#customers th {
+    padding: 1.5rem 1rem;
+    text-align: left;
+    background-color: rgb(209, 228, 239);
+    color: rgb(30, 52, 135);
+}
+
+.btn {
+    padding: 0 1rem;
+    margin: 0 .5rem;
+
+    &:hover {
+        background-color: rgb(209, 228, 239);
+        color: rgb(30, 52, 135);
+    }
+}
+
+.btn-edit, 
+.btn-delete {
+    background-color: rgb(30, 52, 135);
+}

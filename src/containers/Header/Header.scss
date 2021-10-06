@@ -1,0 +1,29 @@
+@import "../../styles/common.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Raleway:wght@300;500;700&display=swap');
+
+.header-container {
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(209, 228, 239);
+    color: rgb(30, 52, 135);
+    height: 40px;
+    position: relative;
+    font-family: Montserrat;
+    .btn-logout {
+        color: $common-text-color;
+        line-height: 40px;
+        height: 40px;
+        color: rgb(30, 52, 135);
+        padding: 0 10px;
+        font-weight: 500;
+        border-radius: 0;
+        &:hover {
+            background-color: rgb(107, 143, 208);
+            color: rgb(209, 228, 239);
+        }
+        i {
+            font-size: $base-size + 1px;
+        }
+    }
+}
