@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
+
 import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
+
 import { handleLogin } from "../../services/userService";
 import { userLoginSuccess } from '../../store/actions';
 
@@ -13,7 +15,8 @@ class Login extends Component {
         super(props);
         this.state = {
             userName : '',
-            password : ''
+            password : '',
+            errMessage: ''
         }
     }
 

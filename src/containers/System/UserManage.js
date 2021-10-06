@@ -33,12 +33,12 @@ class UserManage extends Component {
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Address</th>
-                        <th>  <span>  </span> </th>
+                        <th><span></span></th>
                     </tr>
                         {
                             arrayUsers &&
                             arrayUsers.map((item, index) => (
-                                <tr>
+                                <tr key={index}>
                                     <td>{item.email}</td>
                                     <td>{item.firstName}</td>
                                     <td>{item.lastName}</td>
