@@ -3,34 +3,34 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { emitter } from '../../utils/emitter';
+import _ from 'lodash';
 
-class ModalUser extends Component {
+class ModalEditUser extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            id: '',
             email: '',
             password: '',
             firstName: '',
             lastName: '',
             address: ''
         }
-        this.listenToEmitter();
-    }
-
-    listenToEmitter() {
-        emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
-            this.setState({
-                email: '',
-                password: '',
-                firstName: '',
-                lastName: '',
-                address: ''
-            })
-        })
     }
 
     componentDidMount() {
+        let user = this.props.currentUser;
+        if(user && !_.isEmpty(user)) {
+            this.setState({
+                id: user.id,
+                email: user.email,
+                password: 'harcode',
+                firstName: user.firstName,
+                lastName: user.lastName,
+                address: user.address
+            })
+        }
     }
 
     toggle = () => {
@@ -45,7 +45,7 @@ class ModalUser extends Component {
 
     checkValidateInput = () => {
         let isValid = true;
-        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address'];
+        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address']
         for(let i = 0; i < arrInput.length; i++) {
             if(!this.state[arrInput[i]]) {
                 isValid = false;
@@ -56,11 +56,11 @@ class ModalUser extends Component {
         return isValid;
     }
 
-    handleAddNewUser = () => {
+    handleSaveUser = () => {
         let isValid = this.checkValidateInput();
         if(isValid === true) {
             //call api
-            this.props.createNewUser(this.state);
+            this.props.editUser(this.state);
         }
     }
 
@@ -76,7 +76,7 @@ class ModalUser extends Component {
                     className="modalHeader" 
                     toggle={() => this.toggle()}
                 >
-                    Create A New User
+                    Edit User
                 </ModalHeader>
                     <ModalBody className="formInput">
                         <div className="input-container">
@@ -85,6 +85,7 @@ class ModalUser extends Component {
                                 type="text" 
                                 value={this.state.email}
                                 onChange={(e) => this.handleOnchange(e, "email")}
+                                disabled
                             />
                         </div>
                         <div className="input-container">
@@ -93,6 +94,7 @@ class ModalUser extends Component {
                                 type="password"
                                 value={this.state.password}
                                 onChange={(e) => this.handleOnchange(e, "password")}
+                                disabled
                             />
                         </div>
                         <div className="input-container">
@@ -123,9 +125,9 @@ class ModalUser extends Component {
                 <ModalFooter>
                     <Button 
                         color="primary" 
-                        onClick={() => this.handleAddNewUser()}
+                        onClick={() => this.handleSaveUser()}
                     >
-                        Create
+                        Save Changes
                     </Button>{' '}
                     <Button color="secondary" onClick={() => this.toggle()}>Cancel</Button>
                 </ModalFooter>
@@ -145,6 +147,6 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ModalUser);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalEditUser);
 
 
