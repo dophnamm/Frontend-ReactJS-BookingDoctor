@@ -1,4 +1,3 @@
-
 @import "../../styles/_variables.scss";
 
 .home-header-container {
@@ -93,8 +92,117 @@
                 }
             }
 
-            .flag{
-                font-size: 1rem;
+            .choose-language {
+                display: flex;
+                align-items: center;
+                gap: 0 1rem;
+                font-size: 1.2rem;
+
+                div {
+                    padding: 1rem;
+                }
+
+                .language-vi,
+                .language-en {
+                    opacity: 0.5;
+                    &.active {
+                        opacity: 1;
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: url(../../assets/Background1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 720px;
+
+    .banner-header-content {
+        text-align: center;
+
+        h2 {
+            font-family: Montserrat;
+            font-size: 30px;
+            font-weight: 700;
+            padding-top: 2rem;
+            color: $dark-blue;
+            text-transform: uppercase;
+        }
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        width: 400px;
+        background-color: $light;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding: .5rem;
+        border-radius: 50px;
+
+        i {
+            margin-right: 1rem;
+            color: $light-blue;
+            margin-left: 1rem;
+        }
+
+        input {
+            border: none;
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            color: $light-blue;
+
+            &::placeholder {
+                color: $light-blue;
+            }
+        }
+    }
+
+    .option {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        position: relative;
+        top: 400px;
+        background-image: linear-gradient(
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.9),
+                rgba(255, 255, 255, 1)
+        );
+
+        .option-item {
+            width: 140px;
+            text-align: center;
+            padding: 1rem .5rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: $light;
+
+                .item-text {
+                    color: $dark-blue;
+                }
+            }
+
+            .item-icon {
+                img {
+                    margin-bottom: 1rem;
+                    width: 50px;
+                }
+            }
+            
+            .item-text {
+                font-family: Raleway;
+                color: $light-blue;
+                font-weight: 700;
+                margin-bottom: 0;
             }
         }
     }

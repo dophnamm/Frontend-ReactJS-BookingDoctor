@@ -1,4 +1,34 @@
 {
+    "homeHeader": {
+        "specialty": "Medical Specialty",
+        "searchdoctor": "Find a doctor by specialty",
+        "health": "Health Facilities",
+        "selectroom": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "selectdoctor": "Choose a good doctor",
+        "fee": "Checkup Package",
+        "checkhealth": "General health check",
+        "support": "Support"
+    },
+
+    "banner": {
+        "h2-1": "MEDICAL BACKGROUND",
+        "h2-2": "COMPREHENSIVE HEALTH CARE"
+    },
+
+    "search": {
+        "search": "Search..."
+    },
+
+    "option": {
+        "itemone": "Specialist Examination",
+        "itemtwo": "Remote Examination",
+        "itemthree": "General Examination",
+        "itemfour": "Medical Tests",
+        "itemfive": "Mental Health",
+        "itemsix": "Dental Examination"
+    },
+
     "common": {
         "add": "Add",
         "edit": "Edit",
