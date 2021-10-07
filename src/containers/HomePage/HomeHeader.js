@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import { FormattedMessage } from 'react-intl';
+import { LANGUAGES } from '../../utils';
+import { changeLanguageApp } from '../../store/actions/appActions';
 
 class HomeHeader extends Component {
+
+    changeLanguage = (languege) => {
+        //redux event: actions
+        this.props.changeLanguageAppRedux(languege)
+    }
+
     render() {
-        console.log('check props' , this.props)
+        let language = this.props.language;
         return (
             <>
                 <div className="home-header-container">
@@ -63,8 +71,21 @@ class HomeHeader extends Component {
                                 <FormattedMessage id="homeHeader.support"/>
                             </div>
                             <div className="choose-language">
-                                <div className="language-vi">VI</div>
-                                <div className="language-en">EN</div>
+                                <div className={    language === LANGUAGES.VI ?
+                                                    'language-vi active' :
+                                                    'language-vi'
+                                                }
+                                >
+                                    <span onClick={() => this.changeLanguage(LANGUAGES.VI)}> VI </span>
+                                </div>
+
+                                <div className={    language === LANGUAGES.EN ?
+                                                    'language-en active' :
+                                                    'language-en'
+                                                }
+                                >
+                                    <span onClick={() => this.changeLanguage(LANGUAGES.EN)}> EN </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,6 +160,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        changeLanguageAppRedux: (language) => dispatch(changeLanguageApp(language))
     };
 };
 
