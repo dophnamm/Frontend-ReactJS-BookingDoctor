@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import "./UserManage.scss";
-import { getAllUsers } from "../../services/userService";
+import { getAllUsers, createNewUserServices } from "../../services/userService";
 import ModalUser from './ModalUser';
 
 class UserManage extends Component {
@@ -16,6 +16,10 @@ class UserManage extends Component {
     }
 
     async componentDidMount() {
+        await this.getAllUser();
+    }
+
+    getAllUser = async () => {
         let response = await getAllUsers('ALL')
         if(response && response.errCode === 0) {
             this.setState({
@@ -36,6 +40,22 @@ class UserManage extends Component {
         })
     }
 
+    createNewUser = async (data) => {
+        try {
+            let response = await createNewUserServices(data)
+            if(response && response.errCode !== 0) {
+                alert(response.errMessage)
+            } else {
+                await this.getAllUser();
+                this.setState({
+                    isOpenModalUser: false
+                })
+            }
+        } catch(e) {
+            console.log(e)
+        }
+    }
+
     render() {
         let arrayUsers  = this.state.arrayUsers;
         return (
@@ -43,6 +63,7 @@ class UserManage extends Component {
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModal}
+                    createNewUser={this.createNewUser}
                 />
                 <div className="h2 text-center mb-5">User Management</div>
                 <div 
@@ -52,13 +73,14 @@ class UserManage extends Component {
                     Add New Users
                 </div>
                 <table id="customers">
-                    <tr>
-                        <th>Email</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Address</th>
-                        <th><span></span></th>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>Email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Address</th>
+                            <th><span></span></th>
+                        </tr>
                         {
                             arrayUsers &&
                             arrayUsers.map((item, index) => (
@@ -78,6 +100,7 @@ class UserManage extends Component {
                                 </tr>
                             ))
                         }
+                    </tbody>
                 </table>
             </div>
         );
