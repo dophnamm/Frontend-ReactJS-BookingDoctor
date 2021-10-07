@@ -1,0 +1,101 @@
+
+@import "../../styles/_variables.scss";
+
+.home-header-container {
+    height: 100px;
+    padding: 1rem;
+
+    .home-header-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .left-content {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            .header-icon-nav {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px 0;
+                justify-content: center;
+                cursor: pointer;
+                
+                &:hover {
+                    span:nth-child(1) {
+                        width: 100%;
+                    }
+                    
+                    span:nth-child(2) {
+                        width: 100%;
+                    }
+                }
+                
+                span{
+                    height: 2px;
+                    display: block;
+                    background-color: $light-blue;
+                    transition: all .5s ease;
+
+                    &:nth-child(1) {
+                        width: 45%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 75%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .header-logo {
+                height: 100%;
+                width: 100px;
+                background: url('../../assets/logo.svg') center center no-repeat;
+            }
+        }
+
+        .center-content {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: Montserrat;
+
+            .child-content {
+                p {
+                    margin-bottom: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .right-content {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: Montserrat;
+
+            .support {
+                display: flex;
+                align-items: center;
+
+                i {
+                    color: $light-blue;
+                    font-size: 24px;
+                    margin-right: 1rem;
+                }
+            }
+
+            .flag{
+                font-size: 1rem;
+            }
+        }
+    }
+}
