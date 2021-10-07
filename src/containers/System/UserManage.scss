@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Raleway:wght@300;500;700&display=swap');
 
+.h2 {
+    font-family: Montserrat;
+}
+
 #customers {
     font-family: Montserrat;
     border-collapse: collapse;
@@ -35,4 +39,57 @@ tr:hover {
 .btn-edit, 
 .btn-delete {
     background-color: rgb(30, 52, 135);
+}
+
+.addUser {
+    margin-left: 0;
+    font-family: Montserrat;
+}
+
+.formInput {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-user {
+    .input-container {
+        display: flex;
+        width: 49%;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        font-family: Montserrat;
+
+        label {
+            margin-bottom: .5rem;
+            color: rgb(30, 52, 135);
+        }
+
+        input {
+            border: 1px solid rgb(30, 52, 135);
+            outline: none;
+            padding: .7rem;
+        }
+    }
+}
+
+.modalHeader {
+    height: 50px;
+    background-color: rgb(209, 228, 239) !important;
+
+    .modal-title {
+        line-height: 50px !important;
+        color: rgb(30, 52, 135);
+    }
+
+    .close {
+        background-color: rgb(30, 52, 135);
+        color: rgb(209, 228, 239);
+        border: none;
+
+        &:hover {
+            background-color: rgb(107, 143, 208);
+            color: rgb(30, 52, 135);
+        }
+    }
 }

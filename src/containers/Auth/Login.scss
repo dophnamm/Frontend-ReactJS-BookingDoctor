@@ -116,6 +116,10 @@
 	.login-form {
 		&-container {
 			width: 360px;
+			&:hover {
+				transform: none;
+				box-shadow: none;
+			}
 		}
 
 		.login-content {
