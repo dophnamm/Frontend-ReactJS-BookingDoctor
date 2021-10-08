@@ -3,6 +3,10 @@
 .home-header-container {
     height: 100px;
     padding: 1rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
     .home-header-content {
         width: 100%;
@@ -127,7 +131,8 @@
     background: url(../../assets/Background1.jpg);
     background-position: center;
     background-size: cover;
-    height: 720px;
+    background-repeat: no-repeat;
+    height: 800px;
     margin-bottom: 20px;
 
     .banner-header-content {
@@ -177,7 +182,7 @@
         gap: 2rem;
         justify-content: center;
         position: relative;
-        top: 390px;
+        top: 480px;
         background-image: linear-gradient(
                 rgba(255, 255, 255, 0.1),
                 rgba(255, 255, 255, 0.9),
