@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import "./Specialty.scss";
+import './OutStandingDoctor.scss';
 import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png";
 
-class Specialty extends Component {
+class OutStandingDoctor extends Component {
 
     render() {
         return (
-           <div className="section-specialty">
+           <div className="section-outstanding-doctor">
                 <div className="section-content">
+
                     <div className="section-header">
-                        <div className="sub-header">Chuyển Khoa Phổ Biến</div>
+                        <div className="sub-header">Bác Sĩ Nổi Bật Tuần Qua</div>
                         <button>Xem Thêm</button>
                     </div>
 
@@ -86,4 +87,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
