@@ -72,16 +72,14 @@ class HomeHeader extends Component {
                             </div>
                             <div className="choose-language">
                                 <div className={    language === LANGUAGES.VI ?
-                                                    'language-vi active' :
-                                                    'language-vi'
+                                                    'language-vi active' : 'language-vi'
                                                 }
                                 >
                                     <span onClick={() => this.changeLanguage(LANGUAGES.VI)}> VI </span>
                                 </div>
 
                                 <div className={    language === LANGUAGES.EN ?
-                                                    'language-en active' :
-                                                    'language-en'
+                                                    'language-en active' : 'language-en'
                                                 }
                                 >
                                     <span onClick={() => this.changeLanguage(LANGUAGES.EN)}> EN </span>
