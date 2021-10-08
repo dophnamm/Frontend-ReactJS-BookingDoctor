@@ -58,6 +58,7 @@
         "role": "Role",
         "gender": "Gender",
         "image": "Avatar",
+        "choose": "Choose...",
         "save": "Save"
     }
 }

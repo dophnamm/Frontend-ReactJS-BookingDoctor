@@ -102,7 +102,10 @@ class UserRedux extends Component {
                                         <FormattedMessage id="manage-user.position"/>
                                     </p>
                                     <select defaultValue={'DEFAULT'} className="form-control">
-                                        <option value="DEFAULT" selected>Choose...</option>
+                                        <option value="DEFAULT" selected>
+                                            {/* <FormattedMessage id="manage-user.choose"/> */}
+                                            Choose...
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -113,7 +116,10 @@ class UserRedux extends Component {
                                         <FormattedMessage id="manage-user.role"/>
                                     </p>
                                     <select defaultValue={'DEFAULT'} className="form-control">
-                                        <option value="DEFAULT" selected>Choose...</option>
+                                        <option value="DEFAULT" selected>
+                                            {/* <FormattedMessage id="manage-user.choose"/> */}
+                                            Choose...
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -125,7 +131,10 @@ class UserRedux extends Component {
                                         <FormattedMessage id="manage-user.gender"/>
                                     </p>
                                     <select defaultValue={'DEFAULT'} className="form-control">
-                                        <option value="DEFAULT" selected>Choose...</option>
+                                        <option value="DEFAULT" selected>
+                                            {/* <FormattedMessage id="manage-user.choose"/> */}
+                                            Choose...
+                                        </option>
                                         {
                                             genders && genders.length &&
                                             genders.map((item, index) => (

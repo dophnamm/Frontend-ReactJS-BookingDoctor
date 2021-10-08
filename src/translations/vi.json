@@ -58,6 +58,7 @@
         "role": "Vai Trò",
         "gender": "Giới Tính",
         "image": "Ảnh Đại Diện",
+        "choose": "Chọn...",
         "save": "Tạo"
     }
 }
