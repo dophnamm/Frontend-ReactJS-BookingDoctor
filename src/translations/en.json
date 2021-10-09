@@ -59,6 +59,7 @@
         "gender": "Gender",
         "image": "Avatar",
         "choose": "Choose...",
+        "upimage": "Upload",
         "save": "Save"
     }
 }
