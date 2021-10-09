@@ -35,8 +35,8 @@ class Header extends Component {
                             EN
                     </span>
                     <span className="welcome"> 
-                        <FormattedMessage id="homeHeader.welcome"/>
-                        {userInfo && userInfo.firstName ? userInfo.firstName : ''}  
+                        <FormattedMessage id="homeHeader.welcome"/>&nbsp;
+                        {userInfo && userInfo.firstName ? userInfo.firstName : ''}&nbsp;
                         {userInfo && userInfo.lastName ? userInfo.lastName : ''} 
                     </span>
                 </div>

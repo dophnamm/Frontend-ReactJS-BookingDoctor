@@ -60,6 +60,7 @@
         "image": "Avatar",
         "choose": "Choose...",
         "upimage": "Upload",
-        "save": "Save"
+        "save": "Save",
+        "edit": "Edit"
     }
 }

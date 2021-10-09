@@ -50,6 +50,22 @@
     }
 }
 
+.btn-save-edit {
+    padding: .5rem 3rem;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    color:  rgb(209, 228, 239);
+    background-color: rgb(30, 52, 135);
+    transition: all .3s ease;
+    float: right;
+
+    &:hover {
+        color:  rgb(30, 52, 135);
+        background-color: rgb(209, 228, 239);
+    }
+}
+
 .choose-image {
     display: flex;
     align-items: flex-start;
