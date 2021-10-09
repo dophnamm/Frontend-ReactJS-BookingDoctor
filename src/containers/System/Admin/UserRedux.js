@@ -16,7 +16,18 @@ class UserRedux extends Component {
             positionArr: [],
             roleArr: [],
             previewImgURL: '',
-            isOpen: false
+            isOpen: false,
+
+            email: '',
+            password: '',
+            firstName: '',
+            lastName: '',
+            phoneNumber: '',
+            address: '',
+            gender: '',
+            position: '',
+            role: '',
+            avatar: ''
         }
     }
 
@@ -29,22 +40,28 @@ class UserRedux extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         //render => Didupdate
         if(prevProps.genderRedux !== this.props.genderRedux) {
+            let arrGenders = this.props.genderRedux
             this.setState({
-                genderArr: this.props.genderRedux
+                genderArr: arrGenders,
+                gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].key : ''
             })
         }
 
         // Role redux
         if(prevProps.roleRedux !== this.props.roleRedux) {
+            let arrRoles = this.props.roleRedux
             this.setState({
-                roleArr: this.props.roleRedux
+                roleArr: arrRoles,
+                role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : ''
             })
         }
 
         // Position redux
         if(prevProps.positionRedux !== this.props.positionRedux) {
+            let arrPositions = this.props.positionRedux
             this.setState({
-                positionArr: this.props.positionRedux
+                positionArr: arrPositions,
+                position:  arrPositions && arrPositions.length > 0 ? arrPositions[0].key : ''
             })
         }
     }
@@ -55,7 +72,8 @@ class UserRedux extends Component {
         if(file) {
             let objectUrl = URL.createObjectURL(file)
             this.setState({
-                previewImgURL: objectUrl
+                previewImgURL: objectUrl,
+                avatar: file
             })
         }
     }
@@ -63,7 +81,48 @@ class UserRedux extends Component {
     openImage = () => {
         if(!this.state.previewImgURL) return;
         this.setState({
-            isOpen: true
+            isOpen: true,
+        })
+    }
+
+    onChangeInput = (e, id) => {
+        let copyState = { ...this.state }
+        copyState[id] = e.target.value
+        this.setState({
+            ...copyState
+        })
+    }
+
+    checkValidateInput = () => {
+        let isValid = true;
+        let arrCheck = ['email', 'password', 
+                        'firstName', 'lastName', 
+                        'phoneNumber', 'address']
+        for(let i = 0; i < arrCheck.length; i++) {
+            if(!this.state[arrCheck[i]]) {
+                isValid = false
+                alert('This input is require ' + arrCheck[i])
+                break;
+            }
+        }
+        return isValid;
+    }
+
+    handleSaveUser = () => {
+        let isValid = this.checkValidateInput()
+        if(isValid === false) return;
+
+        // action
+        this.props.createNewUser({
+            email: this.state.email,
+            password: this.state.password,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            address: this.state.address,
+            gender: this.state.gender,
+            roleId: this.state.role,
+            positionId: this.state.position,
+            phonenumber: this.state.phoneNumber,
         })
     }
 
@@ -73,6 +132,8 @@ class UserRedux extends Component {
         let positions = this.state.positionArr
         let language = this.props.language
         let isLoadingGender = this.props.isLoadingGender
+        let { email, password, firstName, lastName, phoneNumber, address, gender, position, role, avatar } = this.state
+
         return (
             <div className="container-user">
                 <div className="user-body">
@@ -93,7 +154,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.email"/>
                                     </p>
-                                    <input className="form-control" type="email" placeholder="Email"/>
+                                    <input 
+                                        className="form-control" 
+                                        type="email" 
+                                        placeholder="Email"
+                                        value={email}
+                                        onChange={(e) => this.onChangeInput(e, 'email')}
+                                    />
                                 </div>
                             </div>
 
@@ -102,7 +169,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.password"/>
                                     </p>
-                                    <input className="form-control" type="password" placeholder="Password"/>
+                                    <input 
+                                        className="form-control" 
+                                        type="password" 
+                                        placeholder="Password"
+                                        value={password}
+                                        onChange={(e) => this.onChangeInput(e, 'password')}
+                                    />
                                </div>
                             </div>
 
@@ -111,7 +184,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.first-name"/>
                                     </p>
-                                    <input className="form-control" type="text" placeholder="First Name"/>
+                                    <input 
+                                        className="form-control" 
+                                        type="text" 
+                                        placeholder="First Name"
+                                        value={firstName}
+                                        onChange={(e) => this.onChangeInput(e, 'firstName')}
+                                    />
                                 </div>
                             </div>
 
@@ -120,7 +199,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.last-name"/>
                                     </p>
-                                    <input className="form-control" type="text" placeholder="Last Name"/>
+                                    <input 
+                                        className="form-control" 
+                                        type="text" 
+                                        placeholder="Last Name"
+                                        value={lastName}
+                                        onChange={(e) => this.onChangeInput(e, 'lastName')}
+                                    />
                                 </div>
                             </div>
 
@@ -129,7 +214,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.phone"/>
                                     </p>
-                                    <input className="form-control" type="text" placeholder="Phone Number"/>
+                                    <input 
+                                        className="form-control" 
+                                        type="text" 
+                                        placeholder="Phone Number"
+                                        value={phoneNumber}
+                                        onChange={(e) => this.onChangeInput(e, 'phoneNumber')}
+                                    />
                                 </div>
                             </div>
 
@@ -138,7 +229,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.address"/>
                                     </p>
-                                    <input className="form-control" type="text" placeholder="Address"/>
+                                    <input 
+                                        className="form-control" 
+                                        type="text" 
+                                        placeholder="Address"
+                                        value={address}
+                                        onChange={(e) => this.onChangeInput(e, 'address')}
+                                    />
                                 </div>
                             </div>
 
@@ -147,15 +244,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.position"/>
                                     </p>
-                                    <select defaultValue={'DEFAULT'} className="form-control">
-                                        <option value="DEFAULT" selected>
-                                            {/* <FormattedMessage id="manage-user.choose"/> */}
-                                            Choose...
-                                        </option>
+                                    <select className="form-control"
+                                        onChange={(e) => this.onChangeInput(e, 'position')}
+                                    >
                                         {
                                             positions && positions.length > 0 &&
                                             positions.map((item, index) => (
-                                                <option key={index}>
+                                                <option key={index} value={item.key}>
                                                     {language === LANGUAGES.VI ?
                                                     item.valueVi : item.valueEn}
                                                 </option>
@@ -170,15 +265,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.role"/>
                                     </p>
-                                    <select defaultValue={'DEFAULT'} className="form-control">
-                                        <option value="DEFAULT" selected>
-                                            {/* <FormattedMessage id="manage-user.choose"/> */}
-                                            Choose...
-                                        </option>
+                                    <select className="form-control"
+                                        onChange={(e) => this.onChangeInput(e, 'role')}
+                                    >
                                         {
                                             roles && roles.length > 0 &&
                                             roles.map((item, index) => (
-                                                <option key={index}>
+                                                <option key={index} value={item.key}>
                                                     {language === LANGUAGES.VI ?
                                                     item.valueVi : item.valueEn}
                                                 </option>
@@ -194,15 +287,13 @@ class UserRedux extends Component {
                                     <p>
                                         <FormattedMessage id="manage-user.gender"/>
                                     </p>
-                                    <select defaultValue={'DEFAULT'} className="form-control">
-                                        <option value="DEFAULT" selected>
-                                            {/* <FormattedMessage id="manage-user.choose"/> */}
-                                            Choose...
-                                        </option>
+                                    <select className="form-control"
+                                        onChange={(e) => this.onChangeInput(e, 'gender')}
+                                    >
                                         {
                                             genders && genders.length &&
                                             genders.map((item, index) => (
-                                                <option key={index}>
+                                                <option key={index} value={item.key}>
                                                     {language === LANGUAGES.VI ?
                                                     item.valueVi : item.valueEn}
                                                 </option>
@@ -242,7 +333,9 @@ class UserRedux extends Component {
                             }
 
                             <div className="col-12">
-                                <button className="btn-save">
+                                <button className="btn-save"
+                                    onClick={() => this.handleSaveUser()}
+                                >
                                     <FormattedMessage id="manage-user.save"/>
                                 </button>
                             </div>
@@ -268,7 +361,8 @@ const mapDispatchToProps = dispatch => {
     return {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
         getPositionStart: () => dispatch(actions.fetchPositionStart()), 
-        getRoleStart: () => dispatch(actions.fetchRoleStart())
+        getRoleStart: () => dispatch(actions.fetchRoleStart()),
+        createNewUser: (data) => dispatch(actions.createNewUser(data)),
 
         // processLogout: () => dispatch(actions.processLogout()),
         // changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language))

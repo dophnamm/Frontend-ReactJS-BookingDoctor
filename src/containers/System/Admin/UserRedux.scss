@@ -11,7 +11,7 @@
     
     input {
         margin-top: .5rem;
-        padding: 0.8rem 1rem;
+        padding: 1.5rem 1rem;
         outline: none;
         
         &:focus {
@@ -22,7 +22,7 @@
 
     select {
         margin-top: .5rem;
-        padding: .8rem 1rem !important;
+        height: 44px;
         
         &:focus {
             box-shadow: none;
