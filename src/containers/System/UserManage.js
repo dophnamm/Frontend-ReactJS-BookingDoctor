@@ -140,10 +140,10 @@ class UserManage extends Component {
                 <table id="customers">
                     <tbody>
                         <tr>
-                            <th>Email</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Address</th>
+                            <th><FormattedMessage id="manage-user.email"/></th>
+                            <th><FormattedMessage id="manage-user.first-name"/></th>
+                            <th><FormattedMessage id="manage-user.last-name"/></th>
+                            <th><FormattedMessage id="manage-user.address"/></th>
                             <th><span></span></th>
                         </tr>
                         {

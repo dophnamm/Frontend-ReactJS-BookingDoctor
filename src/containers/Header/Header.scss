@@ -9,7 +9,8 @@
     background-color: rgb(209, 228, 239);
     color: rgb(30, 52, 135);
     height: 80px;
-    position: relative;
+    position: sticky;
+    top: 0;
     font-family: Montserrat;
     .btn-logout {
         color: $common-text-color;
