@@ -13,7 +13,7 @@
     },
 
     "banner": {
-        "h2-1": "MEDICAL BACKGROUND",
+        "h2-1": "MEDICAL PLATFORM",
         "h2-2": "COMPREHENSIVE HEALTH CARE"
     },
 
@@ -62,5 +62,9 @@
         "upimage": "Upload",
         "save": "Save",
         "edit": "Edit"
+    },
+    "homepage" : {
+        "outstanding-doctor": "Outstanding Doctor" ,
+        "more": "More Info"
     }
 }

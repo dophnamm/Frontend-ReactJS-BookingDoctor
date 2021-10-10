@@ -62,5 +62,10 @@
         "upimage": "Tải Lên",
         "save": "Tạo",
         "edit": "Sửa"
+    },
+
+    "homepage" : {
+        "outstanding-doctor": "Bác Sĩ Nổi Bật" ,
+        "more": "Xem Thêm"
     }
 }

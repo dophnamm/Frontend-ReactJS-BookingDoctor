@@ -26,11 +26,16 @@ const getAllServiecs = (type) => {
     return axios.get(`/api/allcode?type=${type}`)
 }
 
+const getTopDoctorHomeServices = (limit) => {
+    return axios.get(`/api/top-doctor-home?=${limit}`)
+}
+
 export { 
     handleLogin, 
     getAllUsers, 
     createNewUserServices,
     deleteUserServices,
     editUserServices,
-    getAllServiecs
+    getAllServiecs,
+    getTopDoctorHomeServices,
 };

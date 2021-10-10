@@ -6,68 +6,67 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png";
+import * as actions from "../../../store/actions";
+import { LANGUAGES } from "../../../utils/";
 
 class OutStandingDoctor extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            arrDoctors: []
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+            this.setState({
+                arrDoctors: this.props.topDoctorsRedux
+            })
+        }
+    }
+
+    componentDidMount() {
+        this.props.loadTopDoctors()
+    }
 
     render() {
+        let arrDoctors = this.state.arrDoctors;
+        let { language } = this.props
         return (
            <div className="section-outstanding-doctor">
                 <div className="section-content">
 
                     <div className="section-header">
-                        <div className="sub-header">Bác Sĩ Nổi Bật Tuần Qua</div>
-                        <button>Xem Thêm</button>
+                        <div className="sub-header">
+                            <FormattedMessage id="homepage.outstanding-doctor"/>
+                        </div>
+                        <button>
+                            <FormattedMessage id="homepage.more"/>
+                        </button>
                     </div>
 
                     <Slider {...this.props.settings}>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt=" co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
+                        {
+                            arrDoctors && arrDoctors.length > 0 &&
+                            arrDoctors.map((item, index) => {
+                                let imageBase64 = ''
+                                if(item.image) {
+                                    imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+                                }
+                                let nameVi= `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`
+                                let nameEn= `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`
+                                return (
+                                    <div className="item-block" key={index}>
+                                        <div className="item">
+                                            <div className="bg-img"
+                                                style={{ backgroundImage: `url(${imageBase64})`}}
+                                            />
+                                            <p>{language === LANGUAGES.VI ? nameVi : nameEn}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </Slider>
                 </div>
            </div>
@@ -78,12 +77,15 @@ class OutStandingDoctor extends Component {
 const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
-        language: state.app.language
+        language: state.app.language,
+        topDoctorsRedux: state.admin.topDoctor
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        loadTopDoctors: () => dispatch(actions.fetchTopDoctor())
+
     };
 };
 
