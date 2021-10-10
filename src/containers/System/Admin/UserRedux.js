@@ -214,7 +214,7 @@ class UserRedux extends Component {
                             </div>
                             <div className="col-12">
                                  <div className="body-header">
-                                     <h3>
+                                     <h3 className="font-weight-bold">
                                          <FormattedMessage id="manage-user.add"/>
                                      </h3>
                                  </div>

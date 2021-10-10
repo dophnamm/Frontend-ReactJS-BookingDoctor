@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png";
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils/";
+import { withRouter } from 'react-router';
+
 
 class OutStandingDoctor extends Component {
     constructor(props) {
@@ -27,6 +29,10 @@ class OutStandingDoctor extends Component {
 
     componentDidMount() {
         this.props.loadTopDoctors()
+    }
+
+    handleViewDetailDoctor = (doctor) => {
+        this.props.history.push(`/detail-doctor/${doctor.id}`)
     }
 
     render() {
@@ -56,7 +62,9 @@ class OutStandingDoctor extends Component {
                                 let nameVi= `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`
                                 let nameEn= `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`
                                 return (
-                                    <div className="item-block" key={index}>
+                                    <div className="item-block" key={index} 
+                                        onClick={() => this.handleViewDetailDoctor(item)}
+                                    >
                                         <div className="item">
                                             <div className="bg-img"
                                                 style={{ backgroundImage: `url(${imageBase64})`}}
@@ -89,4 +97,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor));

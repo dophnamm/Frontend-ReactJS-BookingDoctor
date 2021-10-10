@@ -1,0 +1,14 @@
+.custom {
+    height: 100px;
+}
+
+.content-right {
+    textarea {
+        height: 250px;
+        resize: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
