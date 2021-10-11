@@ -252,7 +252,6 @@ export const saveDetailDoctor = (data) => {
     return async (dispatch, getState) => {
         try {
             let res = await saveDetailDoctorServices(data)
-            console.log(res)
             if(res && res.errCode === 0) {
                 toast.success('Save success')
                 dispatch({
@@ -260,7 +259,6 @@ export const saveDetailDoctor = (data) => {
                 })
             } else {
                 toast.error('Save error')
-
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTORS_FAILDED
                 })

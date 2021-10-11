@@ -1,5 +1,6 @@
 .doctor-detail-container {
 
+    
     .intro-doctor {
 
         .content-left {
@@ -11,5 +12,44 @@
                 background-repeat: no-repeat;
             }
         }
+
+        .content-right {
+            
+            .name-doctor {
+                font-size: 32px;
+                margin-bottom: 1.2rem;
+            }
+
+            .desc-doctor {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.main-detail {
+    background-color: rgb(209, 228, 239);
+    border-top: 1px solid rgb(107, 143, 208);
+    .detail-info-doctor {
+        padding: 5rem 0;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            li {
+                margin: .8rem 0;
+            }
+        }
+
+        img {
+            margin-top: 2rem;
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+    .comment-doctor {
+        height: 500px;
     }
 }

@@ -18,6 +18,10 @@
             display: flex;
             align-items: center;
 
+            .header-logo {
+                cursor: pointer;
+            }
+
             .header-icon-nav {
 
                 width: 30px;

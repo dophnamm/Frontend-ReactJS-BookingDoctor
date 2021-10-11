@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
+import HomeFooter from '../../HomePage/HomeFooter';
 import "./DetailDoctor.scss"
 import { getDetailInfoDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
@@ -60,8 +61,7 @@ class DetailDoctor extends Component {
                             <div className="desc-doctor">
                                 {detailDoctor.Markdown && detailDoctor.Markdown.description &&
                                     <span>
-                                        {detailDoctor.Markdown.description}
-                                    </span>
+                                        {detailDoctor.Markdown.description} <br/>                                    </span>
                                 }
                             </div>
                         </div>
@@ -70,20 +70,22 @@ class DetailDoctor extends Component {
                     <div className="schedule-doctor">
 
                     </div>
+                </div>
+                <div className="main-detail">
+                    <div className="container">
+                        <div className=" detail-info-doctor">
+                                {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
+                                    && 
+                                    <div dangerouslySetInnerHTML={{__html: detailDoctor.Markdown.contentHTML}}>
+                                    </div>
+                                }
+                        </div>
+                        <div className="container comment-doctor">
 
-                    <div className="detail-info-doctor">
-                            {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
-                                && 
-                                <div dangerouslySetInnerHTML={{__html: detailDoctor.Markdown.contentHTML}}>
-                                    
-                                </div>
-                            }
-                    </div>
-
-                    <div className="comment-doctor">
-
+                        </div>
                     </div>
                 </div>
+                <HomeFooter />
             </>
         );
     }
