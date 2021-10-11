@@ -1,0 +1,53 @@
+.manage-schedule {
+    .choose-date {
+        height: 38px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .pick-hour-container {
+        .choose-hours {
+            padding         : .8rem 1.4rem;
+            margin          : 1rem 1rem 0.5rem 0;
+            border          : none;
+            outline         : none;
+            background-color: rgb(209, 228, 239);
+            color           : rgb(30, 52, 135);
+            border-radius   : 5px;
+            transition      : all .5s ease;
+
+            &:hover {
+                background-color: rgb(107, 143, 208);
+                color           : rgb(209, 228, 239);
+                cursor          : pointer;
+            }
+
+            &.active {
+                background-color: rgb(107, 143, 208);
+                color           : rgb(30, 52, 135);
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.btn-save-date {
+    padding         : 0.8rem 1rem;
+    border          : none;
+    outline         : none;
+    background-color: rgb(30, 52, 135);
+    color           : rgb(209, 228, 239);
+    border-radius   : 5px;
+    transition      : all .5s ease;
+
+    &:hover {
+        background-color: rgb(209, 228, 239);
+        color           : rgb(30, 52, 135);
+        cursor          : pointer;
+    }
+}

@@ -7,14 +7,15 @@ const initialState = {
     positions: [],
     users: [],
     topDoctor: [],
-    allDoctor: []
+    allDoctor: [],
+    allScheduleTime: []
 }
 
 const adminReducer = (state = initialState, action) => {
     switch (action.type) {
         // get gender
         case actionTypes.FETCH_GENDER_START:
-            let copyState= { ...state }
+            let copyState = { ...state }
             copyState.isLoadingGender = true;
             return {
                 ...copyState
@@ -24,49 +25,49 @@ const adminReducer = (state = initialState, action) => {
             state.isLoadingGender = false;
             return {
                 ...state
-        }
+            }
         case actionTypes.FETCH_GENDER_FAIDED:
             state.isLoadingGender = true;
             state.genders = [];
             return {
                 ...state
-        }
+            }
 
         // get position 
         case actionTypes.FETCH_POSITION_SUCCESS:
             state.positions = action.data;
             return {
                 ...state
-        }
+            }
         case actionTypes.FETCH_POSITION_FAIDED:
             state.positions = [];
             return {
                 ...state
-        }
+            }
 
         // get role
         case actionTypes.FETCH_ROLE_SUCCESS:
             state.roles = action.data;
             return {
                 ...state
-        }
+            }
         case actionTypes.FETCH_ROLE_FAIDED:
             state.roles = [];
             return {
                 ...state
-        }
+            }
 
         // fetch user redux
         case actionTypes.FETCH_ALL_USER_SUCCESS:
             state.users = action.users;
             return {
                 ...state
-        }
+            }
         case actionTypes.FETCH_ALL_USER_FAIDED:
             state.users = [];
             return {
                 ...state
-        }
+            }
 
         // fetch top user doctor
         case actionTypes.FETCH_TOP_USER_SUCCESS:
@@ -78,7 +79,7 @@ const adminReducer = (state = initialState, action) => {
             state.topDoctor = [];
             return {
                 ...state
-        }
+            }
 
         // Fetch All doctor
         case actionTypes.FETCH_ALL_DOCTORS_SUCCESS:
@@ -90,9 +91,20 @@ const adminReducer = (state = initialState, action) => {
             state.allDoctor = [];
             return {
                 ...state
-        }
-        
-        
+            }
+
+        // fetch all time 
+        case actionTypes.FETCH_ALL_SCHEDULE_TIME_SUCCESS:
+            state.allScheduleTime = action.dataTime;
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_ALL_SCHEDULE_TIME_FAILDED:
+            state.allScheduleTime = [];
+            return {
+                ...state
+            }
+
         default:
             return state;
     }

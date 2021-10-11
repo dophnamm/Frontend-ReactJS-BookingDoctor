@@ -29,7 +29,7 @@ class ManageDoctor extends Component {
     buildDataInputSelect = (data) => {
         let result = [];
         let { language } = this.props
-        if(data && data.length > 0 ) {
+        if (data && data.length > 0) {
             data.map((item, index) => {
                 let obj = {}
                 let labelVi = `${item.firstName} ${item.lastName}`
@@ -47,7 +47,7 @@ class ManageDoctor extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevProps.allDoctor !== this.props.allDoctor) {
+        if (prevProps.allDoctor !== this.props.allDoctor) {
             let dataSelect = this.buildDataInputSelect(this.props.allDoctor)
             this.setState({
                 listDoctors: dataSelect
@@ -76,7 +76,7 @@ class ManageDoctor extends Component {
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedOption });
         let res = await getDetailInfoDoctor(selectedOption.value)
-        if(res && res.errCode === 0 && res.data && res.data.Markdown) {
+        if (res && res.errCode === 0 && res.data && res.data.Markdown) {
             let markdown = res.data.Markdown
             this.setState({
                 contentHTML: markdown.contentHTML,
@@ -126,10 +126,10 @@ class ManageDoctor extends Component {
                                 ></textarea>
                             </div>
                         </div>
-                        <MdEditor 
-                            style={{ height: '500px', marginTop: '50px' }} 
-                            renderHTML={text => mdParser.render(text)} 
-                            onChange={this.handleEditorChange} 
+                        <MdEditor
+                            style={{ height: '500px', marginTop: '50px' }}
+                            renderHTML={text => mdParser.render(text)}
+                            onChange={this.handleEditorChange}
                             value={this.state.contentMarkdown}
                         />
                         <div className="mt-5 mb-5 custom">

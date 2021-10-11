@@ -11,16 +11,13 @@
         "support": "Support",
         "welcome": "Welcome, "
     },
-
     "banner": {
         "h2-1": "MEDICAL PLATFORM",
         "h2-2": "COMPREHENSIVE HEALTH CARE"
     },
-
     "search": {
         "search": "Search..."
     },
-
     "option": {
         "itemone": "Specialist Examination",
         "itemtwo": "Remote Examination",
@@ -29,7 +26,6 @@
         "itemfive": "Mental Health",
         "itemsix": "Dental Examination"
     },
-
     "menu": {
         "admin": {
             "manage-user": "User",
@@ -48,7 +44,6 @@
             "manage-schedule": "Manage Doctor Schedule"
         }
     },
-
     "manage-user": {
         "add": "Add New A User",
         "email": "Email",
@@ -66,8 +61,14 @@
         "save": "Save",
         "edit": "Edit"
     },
-    "homepage" : {
-        "outstanding-doctor": "Outstanding Doctor" ,
+    "homepage": {
+        "outstanding-doctor": "Outstanding Doctor",
         "more": "More Info"
+    },
+    "manage-schedule": {
+        "title": "Manage Doctor Examination Plan",
+        "choose-doctor": "Choose Doctor",
+        "choose-date": "Choose Date",
+        "save": "Save Info"
     }
 }

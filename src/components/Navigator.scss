@@ -2,95 +2,112 @@
 
 .navigator-menu {
     display: flex;
-    margin: 0;
+    margin : 0;
     padding: 0;
+
     &.list-unstyled,
     .list-unstyled {
         list-style-type: none;
     }
+
     .menu-group {
         &:hover {
-            cursor: pointer;
-            color: rgb(209, 228, 239);
+            cursor          : pointer;
+            color           : rgb(209, 228, 239);
             background-color: rgb(107, 143, 208);
         }
+
         .menu-group-name {
             text-transform: uppercase;
-            line-height: 40px;
-            padding: 0 15px;
+            line-height   : 40px;
+            padding       : 0 15px;
         }
+
         .menu-list {
-            display: none;
-            background-color: rgb(107, 143, 208);
-            box-shadow: 2px 2px 4px 0 $box-shadow-color;
+            display           : none;
+            background-color  : rgb(107, 143, 208);
+            box-shadow        : 2px 2px 4px 0 $box-shadow-color;
             -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
-            color: $text-in-light;
-            position: absolute;
-            padding: 0;
+            color             : $text-in-light;
+            position          : absolute;
+            padding           : 0;
+
             .menu {
-                width: 100%;
-                padding: 0 15px;
-                height: 35px;
-                line-height: 35px;
+                width         : 100%;
+                padding       : 0 15px;
+                height        : 35px;
+                line-height   : 35px;
                 text-transform: none;
+
                 .menu-link {
                     text-decoration: none;
-                    color: $text-in-light;
+                    color          : $text-in-light;
                 }
+
                 .sub-menu-list {
-                    display: none;
+                    display         : none;
                     background-color: rgb(107, 143, 208);
-                    
-                    box-shadow: 2px 2px 4px 0 $box-shadow-color;
+
+                    box-shadow        : 2px 2px 4px 0 $box-shadow-color;
                     -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
-                    position: absolute;
-                    top: 0;
-                    left: 205px;
-                    padding: 0;
+                    position          : absolute;
+                    top               : 0;
+                    left              : 205px;
+                    padding           : 0;
+
                     .sub-menu {
-                        padding: 0 15px;
-                        height: 35px;
+                        padding    : 0 15px;
+                        height     : 35px;
                         line-height: 35px;
                         white-space: nowrap;
+
                         &:hover {
                             background-color: rgb(30, 52, 135);
-                            
+
                         }
+
                         .sub-menu-link {
                             text-decoration: none;
-                            color: rgb(30, 52, 135);
+                            color          : rgb(30, 52, 135);
 
                             &:hover {
                                 color: rgb(107, 143, 208);
                             }
                         }
+
                         a {
                             display: block;
                         }
+
                         &.active a {
                             font-weight: 500;
-                            color: rgb(209, 228, 239);
+                            color      : rgb(209, 228, 239);
                         }
                     }
                 }
+
                 &.active span {
                     font-weight: 500;
-                    color: rgb(209, 228, 239);
+                    color      : rgb(209, 228, 239);
                 }
+
                 &:hover {
                     background-color: rgb(209, 228, 239);
+
                     .sub-menu-list {
                         display: block;
                     }
                 }
+
                 .icon-right {
-                    display: block;
+                    display : block;
                     position: absolute;
-                    top: 0;
-                    right: 10px;
+                    top     : 0;
+                    right   : 10px;
                 }
             }
         }
+
         &:hover {
             .menu-list {
                 display: block;

@@ -11,16 +11,13 @@
         "support": "Hỗ Trợ",
         "welcome": "Xin chào, "
     },
-
     "banner": {
         "h2-1": "NỀN TẢNG Y TẾ",
         "h2-2": "CHĂM SÓC SỨC KHOẺ TOÀN DIỆN"
     },
-
     "search": {
         "search": "Tìm Kiếm..."
     },
-
     "option": {
         "itemone": "Khám Chuyên Khoa",
         "itemtwo": "Khám Từ Xa",
@@ -29,7 +26,6 @@
         "itemfive": "Sức Khoẻ Tinh Thần",
         "itemsix": "Khám Nha Khoa"
     },
-
     "menu": {
         "admin": {
             "manage-user": "Người Dùng",
@@ -48,7 +44,6 @@
             "manage-schedule": "Quản Lý Kế Hoạch Khám Bệnh"
         }
     },
-
     "manage-user": {
         "add": "Thêm Mới Người Dùng",
         "email": "Email",
@@ -66,9 +61,14 @@
         "save": "Tạo",
         "edit": "Sửa"
     },
-
-    "homepage" : {
-        "outstanding-doctor": "Bác Sĩ Nổi Bật" ,
+    "homepage": {
+        "outstanding-doctor": "Bác Sĩ Nổi Bật",
         "more": "Xem Thêm"
+    },
+    "manage-schedule": {
+        "title": "Kế Hoạch Khám Bệnh Của Bác Sĩ",
+        "choose-doctor": "Chọn Bác Sĩ",
+        "choose-date": "Chọn Ngày",
+        "save": "Lưu Thông Tin"
     }
 }

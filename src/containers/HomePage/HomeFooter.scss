@@ -1,35 +1,35 @@
 @import "../../styles/_variables.scss";
 
 .section-footer {
-    padding: 1rem 0;
+    padding         : 1rem 0;
     background-color: $dark-blue;
 
     .footer-main {
-        display: flex;
-        align-items: center;
+        display        : flex;
+        align-items    : center;
         justify-content: space-between;
-        font-family: Montserrat;
+        font-family    : Montserrat;
 
         .footer-left,
         .footer-right {
-            
+
             p {
-                color: $light;
+                color        : $light;
                 margin-bottom: 0;
             }
         }
 
         .footer-center {
             ul {
-                display: flex;
+                display    : flex;
                 align-items: center;
-                gap: 0 3rem;
-                padding: 0;
-                margin: 0;
+                gap        : 0 3rem;
+                padding    : 0;
+                margin     : 0;
 
                 li {
                     list-style: none;
-                    font-size: 28px;
+                    font-size : 28px;
 
                     a {
                         color: $light;
