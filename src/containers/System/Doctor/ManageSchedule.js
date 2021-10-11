@@ -9,6 +9,7 @@ import moment from 'moment';
 import { toast } from 'react-toastify';
 import _ from 'lodash';
 import './ManageSchedule.scss';
+import { saveBulkScheduleDoctor } from "../../../services/userService";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -88,7 +89,7 @@ class ManageSchedule extends Component {
         }
     }
 
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state
         let result = []
         if (selectedDoctor && _.isEmpty(selectedDoctor)) {
@@ -101,21 +102,28 @@ class ManageSchedule extends Component {
             return;
         }
 
-        let formattedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER)
+        let formattedDate = new Date(currentDate).getTime()
         if (rangeTime && rangeTime.length > 0) {
             let seclectedTime = rangeTime.filter(item => item.isSelected === true)
             if (seclectedTime && seclectedTime.length > 0) {
                 seclectedTime.map(schedule => {
                     let obj = {}
-                    obj.dcotorId = selectedDoctor.value
+                    obj.doctorId = selectedDoctor.value
                     obj.date = formattedDate
-                    obj.time = schedule.keyMap
+                    obj.timeType = schedule.keyMap
                     result.push(obj)
                 })
             } else {
                 toast.error('Plase selected time !')
             }
         }
+
+        let res = await saveBulkScheduleDoctor({
+            arrSchedule: result,
+            doctorId: selectedDoctor.value,
+            formattedDate: formattedDate
+        })
+        console.log(res)
     }
 
     render() {
