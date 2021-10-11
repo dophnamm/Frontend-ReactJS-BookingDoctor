@@ -7,8 +7,8 @@ class HomeFooter extends Component {
 
     render() {
         return (
-           <div className="section-footer">
-               <div className="section-content">
+            <div className="section-footer">
+                <div className="section-content">
                     <div className="footer-main">
                         <div className="footer-left">
                             <p>&copy; Copyright 2021 HUTECH, Inc. </p>
@@ -18,25 +18,25 @@ class HomeFooter extends Component {
                             <ul>
                                 <li>
                                     <a href="/">
-                                        <i class="fab fa-facebook-square"></i>
+                                        <i className="fab fa-facebook-square"></i>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="/">
-                                        <i class="fab fa-linkedin"></i>
+                                        <i className="fab fa-linkedin"></i>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="/">
-                                        <i class="fab fa-instagram"></i>
+                                        <i className="fab fa-instagram"></i>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="/">
-                                        <i class="fas fa-hospital"></i>
+                                        <i className="fas fa-hospital"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -46,8 +46,8 @@ class HomeFooter extends Component {
                             <p>Design By Phuong Nam</p>
                         </div>
                     </div>
-               </div>
-           </div>
+                </div>
+            </div>
         );
     }
 }

@@ -70,5 +70,9 @@
         "choose-doctor": "Choose Doctor",
         "choose-date": "Choose Date",
         "save": "Save Info"
+    },
+    "detail-doctor": {
+        "calendar": "Calendar",
+        "text": "No appointment scheduled during this time, please choose another time."
     }
 }

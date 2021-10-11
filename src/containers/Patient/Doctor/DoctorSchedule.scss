@@ -1,0 +1,71 @@
+@import "../../../styles/_variables.scss";
+
+.main-schedule-container {
+    padding: 2rem 0;
+
+    .all-schedule {
+        select {
+            background-color: transparent;
+            padding         : 0.6rem 0;
+            border          : none;
+            border-bottom   : 1px solid $light-blue;
+            border-radius   : 0;
+            outline         : none;
+            text-transform  : capitalize;
+            font-size       : 16px;
+            font-weight     : 500;
+
+            option {
+                text-transform: capitalize;
+                font-size     : 14px;
+                color         : $light-blue;
+            }
+        }
+    }
+
+    .all-available-time {
+        height      : 250px;
+        border-right: 1px solid $light-blue;
+
+        .text-calendar {
+            font-size    : 15px;
+            margin-bottom: 1.4rem;
+            display      : flex;
+            align-items  : center;
+
+            i {
+                font-size   : 22px;
+                margin-right: 1rem;
+            }
+        }
+
+        .time-content {
+            display  : flex;
+            flex-wrap: wrap;
+            gap      : .8rem;
+
+            .choose-time {
+                background-color: $light;
+                border-radius   : 5px;
+                border          : none;
+                outline         : none;
+                padding         : 0.6rem 1.3rem;
+                cursor          : pointer;
+                transition      : all .3s ease;
+                min-width       : 170px;
+
+                &:hover {
+                    background-color: $light-blue;
+                    color           : $light;
+                }
+            }
+
+            img {
+                width    : 150px;
+                position : absolute;
+                left     : 50%;
+                transform: translateX(-80%);
+            }
+        }
+    }
+}

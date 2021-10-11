@@ -70,5 +70,9 @@
         "choose-doctor": "Chọn Bác Sĩ",
         "choose-date": "Chọn Ngày",
         "save": "Lưu Thông Tin"
+    },
+    "detail-doctor": {
+        "calendar": "Lịch Khám Bệnh",
+        "text": "Không có lịch hẹn trong khoảng thời gian này, vui  lòng chọn thời gian khác ."
     }
 }

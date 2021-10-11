@@ -1,22 +1,24 @@
+@import "../../../styles/_variables.scss";
+
 .doctor-detail-container {
 
-    
     .intro-doctor {
+        margin-bottom: 2rem;
 
         .content-left {
 
             .doctor-img {
-                height: 240px;
-                background-size: contain;
+                height             : 240px;
+                background-size    : contain;
                 background-position: center;
-                background-repeat: no-repeat;
+                background-repeat  : no-repeat;
             }
         }
 
         .content-right {
-            
+
             .name-doctor {
-                font-size: 32px;
+                font-size    : 32px;
                 margin-bottom: 1.2rem;
             }
 
@@ -29,7 +31,8 @@
 
 .main-detail {
     background-color: rgb(209, 228, 239);
-    border-top: 1px solid rgb(107, 143, 208);
+    border-top      : 1px solid rgb(107, 143, 208);
+
     .detail-info-doctor {
         padding: 5rem 0;
 
@@ -44,12 +47,11 @@
         }
 
         img {
-            margin-top: 2rem;
-            width: 100%;
+            margin-top   : 2rem;
+            width        : 100%;
             border-radius: 4px;
         }
     }
-    .comment-doctor {
-        height: 500px;
-    }
+
+    .comment-doctor {}
 }
