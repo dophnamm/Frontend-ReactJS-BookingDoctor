@@ -40,23 +40,35 @@
         }
 
         .time-content {
-            display  : flex;
-            flex-wrap: wrap;
-            gap      : .8rem;
 
-            .choose-time {
-                background-color: $light;
-                border-radius   : 5px;
-                border          : none;
-                outline         : none;
-                padding         : 0.6rem 1.3rem;
-                cursor          : pointer;
-                transition      : all .3s ease;
-                min-width       : 170px;
+            .container-btn {
+                display      : flex;
+                flex-wrap    : wrap;
+                gap          : .8rem;
+                margin-bottom: 2rem;
 
-                &:hover {
-                    background-color: $light-blue;
-                    color           : $light;
+                .choose-time {
+                    background-color: $light;
+                    border-radius   : 5px;
+                    border          : none;
+                    outline         : none;
+                    padding         : 0.6rem 1.3rem;
+                    cursor          : pointer;
+                    transition      : all .3s ease;
+                    min-width       : 170px;
+
+                    &:hover {
+                        background-color: $light-blue;
+                        color           : $light;
+                    }
+                }
+            }
+
+            .book-free {
+
+                i {
+                    margin   : 0 1rem;
+                    font-size: 18px;
                 }
             }
 

@@ -18,7 +18,7 @@ class ManageSchedule extends Component {
             listDoctors: [],
             selectedDoctor: {},
             currentDate: '',
-            rangeTime: []
+            rangeTime: [],
         }
     }
 
@@ -121,7 +121,7 @@ class ManageSchedule extends Component {
         let res = await saveBulkScheduleDoctor({
             arrSchedule: result,
             doctorId: selectedDoctor.value,
-            formattedDate: '' + formattedDate
+            formattedDate: formattedDate
         })
         if (res && res.errCode === 0) {
             toast.success('Success')
@@ -133,7 +133,7 @@ class ManageSchedule extends Component {
     render() {
         let { rangeTime } = this.state
         let { language } = this.props
-        let yesterday = new Date(new Date().setDate(new Date().getDate(0 - 1)));
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         return (
             <>
                 <div className="manage-schedule">

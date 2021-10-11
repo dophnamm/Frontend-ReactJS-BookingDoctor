@@ -73,6 +73,8 @@
     },
     "detail-doctor": {
         "calendar": "Calendar",
-        "text": "No appointment scheduled during this time, please choose another time."
+        "text": "No appointment scheduled during this time, please choose another time.",
+        "choose": "Choose",
+        "booking": "and booking (Free)."
     }
 }
