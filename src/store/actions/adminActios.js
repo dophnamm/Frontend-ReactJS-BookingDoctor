@@ -94,15 +94,15 @@ export const createNewUser = (data) => {
         try {
             let res = await createNewUserServices(data);
             if (res && res.errCode === 0) {
-                toast.success("Success ")
+                toast.success("Thành Công .")
                 dispatch(saveUserSuccess())
                 dispatch(fetchAllUserStart())
             } else {
-                toast.error("Error ")
+                toast.error("Thất bại, vui lòng thử lại .")
                 dispatch(saveUserFailded())
             }
         } catch (e) {
-            toast.error("Error ")
+            toast.error("Thất Bại, vui lòng thử lại .")
             dispatch(saveUserFailded())
         }
     }
@@ -123,15 +123,15 @@ export const deleteAUser = (id) => {
         try {
             let res = await deleteUserServices(id);
             if (res && res.errCode === 0) {
-                toast.success("Delete Success ")
+                toast.success("Xoá thành công . ")
                 dispatch(deleteUserSuccess())
                 dispatch(fetchAllUserStart())
             } else {
-                toast.error("Delete Error ")
+                toast.error("Xoá không thành công . ")
                 dispatch(deleteUserFailed())
             }
         } catch (e) {
-            toast.error("Delete Error ")
+            toast.error("Xoá không thành công .")
             dispatch(deleteUserFailed())
         }
     }
@@ -151,15 +151,15 @@ export const editAUser = (data) => {
         try {
             let res = await editUserServices(data);
             if (res && res.errCode === 0) {
-                toast.success("Update Success ")
+                toast.success("Cập nhật thành công . ")
                 dispatch(editUserSuccess())
                 dispatch(fetchAllUserStart())
             } else {
-                toast.error("Update Error ")
+                toast.error("Cập nhật thất bại .")
                 dispatch(editUserFailed())
             }
         } catch (e) {
-            toast.error("Update Error ")
+            toast.error("Cập nhật thất bại . ")
             dispatch(editUserFailed())
         }
     }
@@ -253,18 +253,18 @@ export const saveDetailDoctor = (data) => {
         try {
             let res = await saveDetailDoctorServices(data)
             if (res && res.errCode === 0) {
-                toast.success('Save success')
+                toast.success('Lưu thành công')
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTORS_SUCCESS
                 })
             } else {
-                toast.error('Save error')
+                toast.error('Lưu không thành công, vui lòng thử lại')
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTORS_FAILDED
                 })
             }
         } catch (e) {
-            toast.error('Save error')
+            toast.error('Lưu không thành công, vui lòng thử lại')
             console.log('SAVE_DETAIL_DOCTORS_FAILDED ', e)
             dispatch({
                 type: actionTypes.SAVE_DETAIL_DOCTORS_FAILDED
@@ -295,3 +295,40 @@ export const fetchAllScheduleTime = () => {
     }
 }
 
+
+// get info extra
+export const getRequireDoctorInfo = () => {
+    return async (dispatch, getState) => {
+        try {
+            dispatch({ type: actionTypes.FETCH_REQUIRE_DOCTOR_INFO_START })
+            let resPrice = await getAllServiecs('PRICE')
+            let resPayment = await getAllServiecs('PAYMENT')
+            let resProvince = await getAllServiecs('PROVINCE')
+
+            if (resPrice && resPrice.errCode === 0 &&
+                resPayment && resPayment.errCode === 0 &&
+                resProvince && resProvince.errCode === 0) {
+                let data = {
+                    resPrice: resPrice.data,
+                    resPayment: resPayment.data,
+                    resProvince: resProvince.data
+                }
+                dispatch(fetchAllRequireDoctorInfoSuccess(data))
+            } else {
+                dispatch(fetchAllRequireDoctorInfoFaild())
+            }
+        } catch (e) {
+            dispatch(fetchAllRequireDoctorInfoFaild())
+            console.log(e)
+        }
+    }
+}
+
+export const fetchAllRequireDoctorInfoSuccess = (allRequiredData) => ({
+    type: actionTypes.FETCH_REQUIRE_DOCTOR_INFO_SUCCESS,
+    data: allRequiredData
+})
+
+export const fetchAllRequireDoctorInfoFaild = () => ({
+    type: actionTypes.FETCH_REQUIRE_DOCTOR_INFO_FAILDED
+})

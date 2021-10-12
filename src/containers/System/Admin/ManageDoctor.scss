@@ -2,13 +2,31 @@
     height: 100px;
 }
 
-.content-right {
-    textarea {
-        height: 250px;
-        resize: none;
+.main-manage {
+    .content-left {
+        .doctor-info-extra {
+            margin-top: 2rem;
 
-        &:focus {
-            box-shadow: none;
+            .option-doctor {
+                .form-control {
+                    height: 38px;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .content-right {
+        textarea {
+            height: 400px;
+            resize: none;
+
+            &:focus {
+                box-shadow: none;
+            }
         }
     }
 }

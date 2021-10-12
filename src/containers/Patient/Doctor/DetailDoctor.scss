@@ -6,12 +6,17 @@
         margin-bottom: 2rem;
 
         .content-left {
+            display    : grid;
+            place-items: center;
+            padding    : 2rem;
 
             .doctor-img {
-                height             : 240px;
+                width              : 200px;
+                height             : 200px;
                 background-size    : contain;
                 background-position: center;
                 background-repeat  : no-repeat;
+
             }
         }
 

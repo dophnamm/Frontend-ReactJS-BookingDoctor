@@ -1,0 +1,109 @@
+@import "../../../styles/_variables.scss";
+
+.main-extra-info {
+    display       : flex;
+    flex-direction: column;
+    margin        : 2rem 0;
+
+    .content-up {
+        border-bottom: 1px solid $dark-blue;
+
+        .address-doctor {
+            text-transform: uppercase;
+            font-size     : 20px;
+            margin-bottom : 1rem;
+        }
+
+        .name-clinic {
+            font-weight  : 600;
+            font-size    : 16px;
+            margin-bottom: .5rem;
+        }
+
+        .detail-address {
+            font-size: 15px;
+        }
+    }
+
+    .content-down {
+        padding: 1rem 0;
+
+        .title-price {
+            margin-bottom  : 1rem;
+            display        : flex;
+            justify-content: space-between;
+            align-items    : flex-end;
+
+            h3 {
+                font-size     : 20px;
+                text-transform: uppercase;
+                margin        : 0;
+            }
+
+            p {
+                font-size     : 14px;
+                margin        : 0;
+                position      : relative;
+                top           : 3px;
+                padding-bottom: .3rem;
+                cursor        : pointer;
+
+                &::before {
+                    content         : "";
+                    position        : absolute;
+                    width           : 0;
+                    height          : 2px;
+                    bottom          : 0;
+                    left            : 0;
+                    background-color: $light;
+                    transition      : all .3s ease;
+                }
+
+                &:hover {
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .detail-price {
+            max-height: 0;
+            overflow  : hidden;
+            transition: max-height .3s ease;
+
+            &.active {
+                max-height: 160px;
+            }
+
+            .detail-price-up {
+                position        : relative;
+                background-color: $light;
+                padding         : .8rem;
+                border          : 1px solid $dark-blue;
+                border-bottom   : 0;
+
+                .sub-price {
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: space-between;
+                    margin-bottom  : .4rem;
+                    font-size      : 15px;
+                }
+
+                p {
+                    font-size: 13.5px;
+                    margin   : 0;
+                }
+            }
+
+            .detail-price-down {
+                background-color: $light-blue;
+                padding         : .8rem;
+                font-size       : 15px;
+                border          : 1px solid $dark-blue;
+            }
+        }
+    }
+}

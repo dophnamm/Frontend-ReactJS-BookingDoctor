@@ -76,5 +76,28 @@
         "text": "Không có lịch hẹn trong khoảng thời gian này, vui  lòng chọn thời gian khác .",
         "choose": "Chọn",
         "booking": "và đặt lịch (Miễn phí)."
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Tạo Mới Thông Tin",
+            "select-doctor": "Chọn Bác Sĩ",
+            "select-doctor-plhd": "Chọn bác sĩ ...",
+            "info": "Thông Tin Giới Thiệu",
+            "save-info": "Lưu Thông Tin",
+            "add-info": "Tạo Thông Tin",
+            "price": "Gía Khám Bệnh",
+            "price-plhd": "Gía khám bệnh ...",
+            "payment": "Phương Thức Thanh Toán",
+            "payment-plhd": "Phương thức thanh toán ...",
+            "province": "Chọn Tỉnh Thành",
+            "province-plhd": "Chọn tỉnh thành ...",
+            "nameClinic": "Tên Phòng Khám",
+            "addressClinic": "Địa Chỉ Phòng Khám",
+            "note": "Ghi Chú"
+        }
+    },
+    "placeholder": {
+        "select-doctor": "Chọn Bác Sĩ",
+        "select-date": "Chọn ngày"
     }
 }

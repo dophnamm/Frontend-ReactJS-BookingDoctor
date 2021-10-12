@@ -76,5 +76,24 @@
         "text": "No appointment scheduled during this time, please choose another time.",
         "choose": "Choose",
         "booking": "and booking (Free)."
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create More Infomation",
+            "select-doctor": "Select Doctor",
+            "select-doctor-plhd": "Select doctor ...",
+            "info": "Infoduction",
+            "save-info": "Save Info",
+            "add-info": "Create Info",
+            "price": "Price",
+            "price-plhd": "Price ...",
+            "payment": "Choose Payment",
+            "payment-plhd": "Choose payment ...",
+            "province": "Choose Province",
+            "province-plhd": "Choose province ...",
+            "nameClinic": "Clinic Name",
+            "addressClinic": "Clinic Address",
+            "note": "Note"
+        }
     }
 }

@@ -1,7 +1,7 @@
 @import "../../../styles/_variables.scss";
 
 .main-schedule-container {
-    padding: 2rem 0;
+    margin: 2rem 0;
 
     .all-schedule {
         select {
@@ -24,8 +24,7 @@
     }
 
     .all-available-time {
-        height      : 250px;
-        border-right: 1px solid $light-blue;
+        height: 250px;
 
         .text-calendar {
             font-size    : 15px;

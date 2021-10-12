@@ -115,6 +115,7 @@ class ManageSchedule extends Component {
                 })
             } else {
                 toast.error('Plase selected time !')
+                return
             }
         }
 
@@ -124,9 +125,11 @@ class ManageSchedule extends Component {
             formattedDate: formattedDate
         })
         if (res && res.errCode === 0) {
-            toast.success('Success')
+            toast.success('Thành công .')
+            return
         } else {
-            toast.error('Error Please try again')
+            toast.error('Vui lòng thử lại .')
+            return
         }
     }
 
@@ -166,7 +169,7 @@ class ManageSchedule extends Component {
                                 </div>
                             </div>
                             <div className="pick-hour-container col-12 mt-3">
-                                <div className="col-8 row">
+                                <div className="col-10 row">
                                     {
                                         rangeTime && rangeTime.length > 0 &&
                                         rangeTime.map((item, index) => {
