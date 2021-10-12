@@ -99,5 +99,14 @@
     "placeholder": {
         "select-doctor": "Chọn Bác Sĩ",
         "select-date": "Chọn ngày"
+    },
+    "patient": {
+        "extra-info": {
+            "address-clinic": "Địa chỉ khám",
+            "price": "Giá khám",
+            "show": "Xem thông tin",
+            "hide": "Ẩn thông tin",
+            "infomation": "Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ ."
+        }
     }
 }

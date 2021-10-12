@@ -95,5 +95,14 @@
             "addressClinic": "Clinic Address",
             "note": "Note"
         }
+    },
+    "patient": {
+        "extra-info": {
+            "address-clinic": "Address Clinic",
+            "price": "Price",
+            "show": "Show infomation",
+            "hide": "Hide infomation",
+            "infomation": "The patient can pay the cost in cash and by swiping card."
+        }
     }
 }
