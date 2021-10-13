@@ -84,13 +84,22 @@
         }
 
         .booking-body {
-            margin: 2rem;
+            margin: 1rem 2rem 2rem;
 
             .booking-input {
                 margin-bottom: 1rem;
 
                 label {
+                    font-size    : 12px;
                     margin-bottom: .5rem;
+                }
+
+                .form-control {
+                    height: 38px;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
                 }
             }
         }

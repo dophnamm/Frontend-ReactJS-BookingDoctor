@@ -48,12 +48,15 @@ class ProfileDoctor extends Component {
     renderTimeBooking = (dataTime) => {
         let { language } = this.props
         if (dataTime && !_.isEmpty(dataTime)) {
+            let time = language === LANGUAGES.VI ?
+                dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn
+
             let date = language === LANGUAGES.VI ?
                 moment.unix(+dataTime.date / 1000).format('dddd - DD/MM/YYYY')
                 :
                 moment.unix(+dataTime.date / 1000).locale('en').format('ddd - MM/DD/YYYY')
             return (
-                <span> {date}</span>
+                <span>{time} - {date}</span>
             )
         }
         return <></>
@@ -62,7 +65,7 @@ class ProfileDoctor extends Component {
     render() {
         let { dataProfile } = this.state
         let { language, dataTime } = this.props
-        let nameEn = '', nameVi = '', priceVi = '', priceEn = '', dateVi = '', dateEn = ''
+        let nameEn = '', nameVi = '', priceVi = '', priceEn = ''
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.firstName} ${dataProfile.lastName}`
             nameEn = `${dataProfile.positionData.valueEn}, ${dataProfile.firstName} ${dataProfile.lastName}`
@@ -71,10 +74,6 @@ class ProfileDoctor extends Component {
             priceVi = `${dataProfile.Doctor_Infor.priceTypeData.valueVi}`
             priceEn = `${dataProfile.Doctor_Infor.priceTypeData.valueEn}`
         }
-        if (dataTime && dataTime.timeTypeData) {
-            dateVi = `${dataTime.timeTypeData.valueVi}`
-            dateEn = `${dataTime.timeTypeData.valueEn}`
-        }
         return (
             <>
                 <div className="doctor-info">
@@ -82,19 +81,22 @@ class ProfileDoctor extends Component {
                         style={{ backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ''})` }}
                     />
                     <div className="intro-doctor">
-                        <div className="booking-schedule">Đặt lịch khám</div>
+                        <div className="booking-schedule">
+                            <FormattedMessage id="patient.booking-modal.book" />
+                        </div>
                         <div className="name-doctor">
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className="dated-choose">
-                            {language === LANGUAGES.VI ? dateVi : dateEn} -
                             {this.renderTimeBooking(dataTime)}
                         </div>
-                        <p>Miễn phí đặt lịch</p>
+                        <p>
+                            <FormattedMessage id="patient.booking-modal.book-free" />
+                        </p>
                     </div>
                 </div>
                 <div className="price">
-                    Giá khám:
+                    <FormattedMessage id="patient.booking-modal.price" />
                     <span>
                         {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI &&
                             <NumberFormat

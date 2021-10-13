@@ -75,7 +75,7 @@
         "calendar": "Calendar",
         "text": "No appointment scheduled during this time, please choose another time.",
         "choose": "Choose",
-        "booking": "and booking (Free)."
+        "booking": "and book (Free)."
     },
     "admin": {
         "manage-doctor": {
@@ -103,6 +103,23 @@
             "show": "Show infomation",
             "hide": "Hide infomation",
             "infomation": "The patient can pay the cost in cash and by swiping card."
+        },
+        "booking-modal": {
+            "title": "Hospital information calendar",
+            "book": "Booking",
+            "book-free": "Free appointment",
+            "price": "Price",
+            "fullname": "Patient Name",
+            "phone": "Phone number",
+            "address": "Address",
+            "email": "Email address",
+            "email-plhd": "Email address",
+            "reason": "Medical examination reason",
+            "birthday": "Birthday",
+            "gender": "Gender",
+            "close": "Cancel",
+            "confirm": "Confirm",
+            "choose": "Select ..."
         }
     }
 }

@@ -96,10 +96,6 @@
             "note": "Ghi Chú"
         }
     },
-    "placeholder": {
-        "select-doctor": "Chọn Bác Sĩ",
-        "select-date": "Chọn ngày"
-    },
     "patient": {
         "extra-info": {
             "address-clinic": "Địa chỉ khám",
@@ -107,6 +103,22 @@
             "show": "Xem thông tin",
             "hide": "Ẩn thông tin",
             "infomation": "Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ ."
+        },
+        "booking-modal": {
+            "title": "Thông tin đặt lịch khám bệnh",
+            "book": "Đặt lịch khám",
+            "book-free": "Đặt lịch miễn phí",
+            "price": "Giá khám",
+            "fullname": "Họ tên bệnh nhân",
+            "phone": "Số điện thoại",
+            "address": "Địa chỉ liên hệ",
+            "email": "Địa chỉ email",
+            "reason": "Lý do khám",
+            "birthday": "Chọn ngày sinh",
+            "gender": "Giới tính",
+            "close": "Thoát",
+            "confirm": "Xác nhận",
+            "choose": "Chọn ..."
         }
     }
 }
