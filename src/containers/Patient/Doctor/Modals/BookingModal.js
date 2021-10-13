@@ -5,6 +5,9 @@ import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../../../utils';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import imageTest from '../../../../assets/about.png'
+import ProfileDoctor from '../ProfileDoctor';
+import _ from 'lodash';
+import { getProfileDoctorById } from '../../../../services/userService';
 
 class BookingModal extends Component {
 
@@ -15,7 +18,6 @@ class BookingModal extends Component {
     }
 
     async componentDidMount() {
-
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -25,7 +27,11 @@ class BookingModal extends Component {
     }
 
     render() {
-        let { isOpenModalBooking, closeBookingModal, dataTime } = this.props
+        let { isOpenModalBooking, closeBookingModal, dataTime } = this.props;
+        let doctorId = '';
+        if (dataTime && !_.isEmpty(dataTime)) {
+            doctorId = dataTime.doctorId
+        }
         return (
             <>
                 <Modal
@@ -46,19 +52,10 @@ class BookingModal extends Component {
                     </ModalHeader>
                     <ModalBody >
                         <div className="header-modal-booking">
-                            <div className="doctor-info">
-                                <img className="doctor-img" src={imageTest} alt="avt" />
-                                <div className="intro-doctor">
-                                    <div className="booking-schedule">Đặt lịch khám</div>
-                                    <div className="name-doctor">Phó giao sư, tiến sĩ, bác sĩ Doctor One</div>
-                                    <div className="dated-choose">15:00 - 15:30 - Thứ 4 - 13/10/2021</div>
-                                    <p>Miễn phí đặt lịch</p>
-                                </div>
-                            </div>
+                            <ProfileDoctor doctorId={doctorId} dataTime={dataTime} />
                         </div>
 
                         <div className="booking-body">
-                            <div className="price"> Giá Khám: 250.000 </div>
                             <div className="row">
                                 <div className="col-6 form-group booking-input">
                                     <label>Họ tên bệnh nhân</label>
@@ -86,7 +83,7 @@ class BookingModal extends Component {
                                 </div>
 
                                 <div className="col-6 form-group booking-input">
-                                    <label>Đặ cho ai</label>
+                                    <label>Đặt cho ai</label>
                                     <input className="form-control" />
                                 </div>
 

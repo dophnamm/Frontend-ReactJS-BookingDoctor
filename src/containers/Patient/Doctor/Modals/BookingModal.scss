@@ -48,8 +48,11 @@
                 padding: 1.5rem 2rem;
 
                 .doctor-img {
-                    width : 140px;
-                    height: 140px;
+                    width              : 140px;
+                    height             : 140px;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-position: center;
                 }
 
                 .intro-doctor {
@@ -70,6 +73,11 @@
                     .dated-choose {
                         font-size    : 15px;
                         margin-bottom: .3rem;
+
+                        span {
+                            margin        : 0 .1rem;
+                            text-transform: capitalize;
+                        }
                     }
                 }
             }
@@ -77,11 +85,6 @@
 
         .booking-body {
             margin: 2rem;
-
-            .price {
-                font-size    : 20px;
-                margin-bottom: 1.4rem;
-            }
 
             .booking-input {
                 margin-bottom: 1rem;
