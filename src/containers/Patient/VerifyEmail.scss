@@ -1,0 +1,41 @@
+@import "../../styles/_variables.scss";
+
+.info-booking-load {
+    text-align: center;
+    margin    : 5rem;
+    font-size : 50px;
+}
+
+.info-booking-success,
+.info-booking-error {
+    width           : 500px;
+    margin          : 5rem auto;
+    text-align      : center;
+    background-color: $light;
+    padding-bottom  : 1rem;
+    border-radius   : 5px;
+    overflow        : hidden;
+
+    .title-booking {
+        padding         : 2rem 1rem 1rem;
+        background-color: $light-blue;
+        color           : $light;
+
+        h3 {
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+
+            a {
+                margin: 0 .3rem;
+                color : $dark-blue;
+            }
+        }
+    }
+
+    .logo-booking {
+        width: 180px;
+    }
+}

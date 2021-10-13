@@ -120,5 +120,13 @@
             "confirm": "Xác nhận",
             "choose": "Chọn ..."
         }
+    },
+    "verify": {
+        "success": " Thành Công 😀 ",
+        "error": "Xin Lỗi 😔",
+        "title-success-one": "Lịch khám bệnh của bạn đã được xác nhận thành công",
+        "title-success-two": "Khi đến khám nhớ đeo khẩu trang và tuân thủ 5K để phòng chống dịch COVID-19 .",
+        "title-error-one": "Lịch đã được xác nhận hoặc không tồn tại. Vui Lòng liên hệ",
+        "title-error-two": "để biết thêm thông tin chi tiết ."
     }
 }

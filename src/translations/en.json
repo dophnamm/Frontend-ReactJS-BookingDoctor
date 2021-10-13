@@ -121,5 +121,13 @@
             "confirm": "Confirm",
             "choose": "Select ..."
         }
+    },
+    "verify": {
+        "success": " Success 😀 ",
+        "error": "So Sorry 😔",
+        "title-success-one": "Your appointment has been successfully confirmed",
+        "title-success-two": "When visiting the clinic, remember to wear a mask and adhere to 5K to prevent the COVID-19",
+        "title-error-one": "The calendar is confirmed or does not exist. Please contact",
+        "title-error-two": "for more detailed information ."
     }
 }
