@@ -20,7 +20,7 @@ class OutStandingDoctor extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+        if (prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
             this.setState({
                 arrDoctors: this.props.topDoctorsRedux
             })
@@ -39,15 +39,15 @@ class OutStandingDoctor extends Component {
         let arrDoctors = this.state.arrDoctors;
         let { language } = this.props
         return (
-           <div className="section-outstanding-doctor">
+            <div className="section-outstanding-doctor">
                 <div className="section-content">
 
                     <div className="section-header">
                         <div className="sub-header">
-                            <FormattedMessage id="homepage.outstanding-doctor"/>
+                            <FormattedMessage id="homepage.outstanding-doctor" />
                         </div>
                         <button>
-                            <FormattedMessage id="homepage.more"/>
+                            <FormattedMessage id="homepage.more" />
                         </button>
                     </div>
 
@@ -56,19 +56,17 @@ class OutStandingDoctor extends Component {
                             arrDoctors && arrDoctors.length > 0 &&
                             arrDoctors.map((item, index) => {
                                 let imageBase64 = ''
-                                if(item.image) {
+                                if (item.image) {
                                     imageBase64 = new Buffer(item.image, 'base64').toString('binary');
                                 }
-                                let nameVi= `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`
-                                let nameEn= `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`
+                                let nameVi = `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`
+                                let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`
                                 return (
-                                    <div className="item-block" key={index} 
+                                    <div className="item-block" key={index}
                                         onClick={() => this.handleViewDetailDoctor(item)}
                                     >
                                         <div className="item">
-                                            <div className="bg-img"
-                                                style={{ backgroundImage: `url(${imageBase64})`}}
-                                            />
+                                            <img src={imageBase64} alt={item.firstName} />
                                             <p>{language === LANGUAGES.VI ? nameVi : nameEn}</p>
                                         </div>
                                     </div>
@@ -77,7 +75,7 @@ class OutStandingDoctor extends Component {
                         }
                     </Slider>
                 </div>
-           </div>
+            </div>
         );
     }
 }

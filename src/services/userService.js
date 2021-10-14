@@ -66,6 +66,14 @@ const postVerifyBookAppointment = (data) => {
     return axios.post(`/api/patient-verify-book-appointment`, data)
 }
 
+const createNewSpecialty = (data) => {
+    return axios.post(`/api/create-new-specialty`, data)
+}
+
+const getAllSpecialty = () => {
+    return axios.get(`/api/get-all-specialty`)
+}
+
 export {
     handleLogin,
     getAllUsers,
@@ -82,5 +90,7 @@ export {
     getExtraInfoById,
     getProfileDoctorById,
     postPatientBookAppointment,
-    postVerifyBookAppointment
+    postVerifyBookAppointment,
+    createNewSpecialty,
+    getAllSpecialty
 };

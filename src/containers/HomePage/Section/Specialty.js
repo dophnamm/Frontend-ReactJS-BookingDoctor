@@ -6,70 +6,58 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png";
+import { getAllSpecialty } from '../../../services/userService';
 
 class Specialty extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            dataSpecialty: []
+        }
+    }
+
+    async componentDidMount() {
+        let res = await getAllSpecialty();
+        console.log('check response', res)
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataSpecialty: res.data ? res.data : []
+            })
+        }
+    }
+
 
     render() {
+        let { dataSpecialty } = this.state
         return (
-           <div className="section-specialty">
+            <div className="section-specialty">
                 <div className="section-content">
                     <div className="section-header">
-                        <div className="sub-header">Chuyển Khoa Phổ Biến</div>
-                        <button>Xem Thêm</button>
+                        <div className="sub-header">
+                            <FormattedMessage id="homepage.specialty" />
+                        </div>
+                        <button>
+                            <FormattedMessage id="homepage.more" />
+                        </button>
                     </div>
 
                     <Slider {...this.props.settings}>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt=" co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
+                        {
+                            dataSpecialty && dataSpecialty.length > 0 &&
+                            dataSpecialty.map((item, index) => {
+                                return (
+                                    <div className="item-block" key={item.id}>
+                                        <div className="item">
+                                            <img src={item.image} alt={item.name} />
+                                            <p>{item.name}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </Slider>
                 </div>
-           </div>
+            </div>
         );
     }
 }

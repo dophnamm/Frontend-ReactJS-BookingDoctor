@@ -230,7 +230,6 @@ class ManageDoctor extends Component {
 
     render() {
         let { handOldData } = this.state
-        console.table(this.state)
         return (
             <>
                 <div className="main-manage">

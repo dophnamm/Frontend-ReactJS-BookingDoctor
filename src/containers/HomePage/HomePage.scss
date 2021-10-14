@@ -81,6 +81,7 @@
             text-align      : center;
             cursor          : pointer;
             transition      : all .3s ease;
+            overflow        : hidden;
 
             &:hover {
                 background-color: white;
@@ -100,8 +101,16 @@
             }
 
             p {
-                font-family  : Montserrat;
-                margin-bottom: 0;
+                font-family     : Montserrat;
+                margin-bottom   : 0;
+                background-color: $light-blue;
+                padding         : .4rem 1rem;
+                border-radius   : 5px;
+                font-size       : 16px;
+                color           : $light;
+                white-space     : nowrap;
+                text-overflow   : ellipsis;
+                overflow        : hidden;
             }
         }
     }

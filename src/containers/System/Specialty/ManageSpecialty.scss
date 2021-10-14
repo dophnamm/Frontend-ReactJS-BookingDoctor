@@ -1,0 +1,70 @@
+@import "../../../styles/_variables.scss";
+
+.manage-specialty-container {
+    .manage-title {
+        text-transform: uppercase;
+    }
+
+    .manage-body {
+
+        .form-control {
+            height       : 38px;
+            border-radius: 5px !important;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .choose-img {
+            border     : 0 !important;
+            width      : fit-content;
+            display    : grid;
+            place-items: center;
+
+            label {
+                display         : flex;
+                align-items     : center;
+                gap             : 0 1rem;
+                margin          : 0;
+                transition      : all .3s ease;
+                height          : 38px;
+                background-color: $light;
+                padding         : 0 1rem;
+                border-radius   : 5px;
+                color           : $dark-blue;
+                cursor          : pointer;
+
+                &:hover {
+                    background-color: $dark-blue;
+                    color           : $light;
+                }
+
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .section-btn {
+            height    : 100px;
+            text-align: right;
+
+            button {
+                border          : none;
+                outline         : none;
+                background-color: $light;
+                color           : $dark-blue;
+                padding         : .5rem 2rem;
+                border-radius   : 5px;
+                transition      : all .3s ease;
+                cursor          : pointer;
+
+                &:hover {
+                    background-color: $dark-blue;
+                    color           : $light;
+                }
+            }
+        }
+    }
+}
