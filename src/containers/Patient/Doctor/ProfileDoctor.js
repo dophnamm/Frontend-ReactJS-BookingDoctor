@@ -64,7 +64,7 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state
-        let { language, dataTime } = this.props
+        let { language, dataTime, isShowDescription } = this.props
         let nameEn = '', nameVi = '', priceVi = '', priceEn = ''
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.firstName} ${dataProfile.lastName}`
@@ -93,6 +93,19 @@ class ProfileDoctor extends Component {
                         <p>
                             <FormattedMessage id="patient.booking-modal.book-free" />
                         </p>
+                        <div className="description-modal">
+                            {isShowDescription === true &&
+                                <>
+                                    {
+                                        dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
+                                        &&
+                                        <span>
+                                            {dataProfile.Markdown.description}
+                                        </span>
+                                    }
+                                </>
+                            }
+                        </div>
                     </div>
                 </div>
                 <div className="price">

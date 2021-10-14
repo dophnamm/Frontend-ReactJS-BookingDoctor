@@ -194,7 +194,6 @@ class ManageDoctor extends Component {
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedOption });
         let { listPayment, listProvince, listPrice, listSpecialty } = this.state
-
         let res = await getDetailInfoDoctor(selectedOption.value)
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
             let markdown = res.data.Markdown
@@ -214,7 +213,6 @@ class ManageDoctor extends Component {
 
                 selectedSpecialty = listSpecialty.find(item => {
                     return item && item.value === specialtyId
-
                 })
 
                 selectedPayment = listPayment.find(item => {

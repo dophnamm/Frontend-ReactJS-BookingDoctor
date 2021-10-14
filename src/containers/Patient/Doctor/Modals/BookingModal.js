@@ -156,7 +156,6 @@ class BookingModal extends Component {
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId
         }
-        console.log(dataTime)
         return (
 
             <>
@@ -178,7 +177,10 @@ class BookingModal extends Component {
                     </ModalHeader>
                     <ModalBody >
                         <div className="header-modal-booking">
-                            <ProfileDoctor doctorId={doctorId} dataTime={dataTime} />
+                            <ProfileDoctor doctorId={doctorId}
+                                dataTime={dataTime}
+                                isShowDescription={false}
+                            />
                         </div>
 
                         <div className="booking-body">
