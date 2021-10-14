@@ -94,6 +94,10 @@
             "province-plhd": "Chọn tỉnh thành ...",
             "nameClinic": "Tên Phòng Khám",
             "addressClinic": "Địa Chỉ Phòng Khám",
+            "specialty": "Chọn Chuyên Khoa",
+            "specialty-plhd": "Chọn chuyên khoa ...",
+            "clinic": "Chọn Phòng Khám",
+            "clinic-plhd": "Chọn phòng khám ...",
             "note": "Ghi Chú"
         }
     },

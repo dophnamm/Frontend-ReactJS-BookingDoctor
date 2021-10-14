@@ -94,6 +94,10 @@
             "province-plhd": "Choose province ...",
             "nameClinic": "Clinic Name",
             "addressClinic": "Clinic Address",
+            "specialty": "Choose Specialties",
+            "specialty-plhd": "Choose specialties ...",
+            "clinic": "Choose Clinic",
+            "clinic-plhd": "Choose clinic ...",
             "note": "Note"
         }
     },
