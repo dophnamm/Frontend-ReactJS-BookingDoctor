@@ -62,6 +62,27 @@
                 }
             }
 
+            .see-more {
+                a {
+                    text-decoration : none;
+                    padding         : .5rem 1rem;
+                    text-align      : right;
+                    width           : fit-content;
+                    background-color: $light;
+                    color           : $dark-blue;
+                    float           : right;
+                    margin-right    : 2rem;
+                    border-radius   : 5px;
+                    transition      : all .3s ease;
+                    cursor          : pointer;
+
+                    &:hover {
+                        color           : $light;
+                        background-color: $dark-blue;
+                    }
+                }
+            }
+
             .price {
                 display: none;
             }

@@ -42,10 +42,20 @@ class DetailSpecialty extends Component {
                         })
                     }
                 }
+                let dataProvince = resProvince.data
+                if (dataProvince && dataProvince.length > 0) {
+                    dataProvince.unshift({
+                        createAt: null,
+                        keyMap: "ALL",
+                        type: "PROVINCE",
+                        valueEn: "ALL",
+                        valueVi: "Toàn Quốc"
+                    })
+                }
                 this.setState({
                     dataDetailSpecialty: res.data,
                     arrDoctorId: arrDoctorId,
-                    listProvince: resProvince.data
+                    listProvince: dataProvince ? dataProvince : []
                 })
             }
         }
@@ -58,8 +68,34 @@ class DetailSpecialty extends Component {
 
     }
 
-    handleOnChangeSelect = (e) => {
-        console.log(e.target.value)
+    handleOnChangeSelect = async (e) => {
+        if (this.props.match && this.props.match.params && this.props.match.params.id) {
+            let id = this.props.match.params.id
+            let location = e.target.value
+
+            let res = await getAllDetailSpecialtyById({
+                id: id,
+                location: location
+            })
+
+            if (res && res.errCode === 0) {
+                let data = res.data
+                let arrDoctorId = []
+                if (data && !_.isEmpty(res.data)) {
+                    let arr = data.doctorSpecialty
+                    if (arr && arr.length > 0) {
+                        arr.map(item => {
+                            arrDoctorId.push(item.doctorId)
+                        })
+                    }
+                }
+
+                this.setState({
+                    dataDetailSpecialty: res.data,
+                    arrDoctorId: arrDoctorId,
+                })
+            }
+        }
     }
 
     render() {
@@ -99,6 +135,7 @@ class DetailSpecialty extends Component {
                                             <div className="col-6 content-left">
                                                 <ProfileDoctor doctorId={item}
                                                     isShowDescription={true}
+                                                    isShowLinkDetail={true}
                                                 />
                                             </div>
                                             <div className="col-6 content-right">

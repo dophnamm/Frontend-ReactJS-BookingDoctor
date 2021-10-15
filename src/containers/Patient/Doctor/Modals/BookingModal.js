@@ -147,7 +147,15 @@ class BookingModal extends Component {
         } else {
             toast.error('Vui lòng nhập đầy đủ thông tin .')
         }
-
+        this.setState({
+            fullName: '',
+            phoneNumber: '',
+            email: '',
+            address: '',
+            reason: '',
+            birthday: '',
+            selectedGender: ''
+        })
     }
 
     render() {
@@ -180,6 +188,7 @@ class BookingModal extends Component {
                             <ProfileDoctor doctorId={doctorId}
                                 dataTime={dataTime}
                                 isShowDescription={false}
+                                isShowLinkDetail={false}
                             />
                         </div>
 
