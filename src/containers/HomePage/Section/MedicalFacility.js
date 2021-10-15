@@ -6,71 +6,64 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png";
+import { getAllClinic } from '../../../services/userService';
+import { withRouter } from 'react-router';
 
 class MedicalFacility extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataClinics: []
+        }
+    }
+
+    async componentDidMount() {
+        let res = await getAllClinic()
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataClinics: res.data ? res.data : []
+            })
+        }
+    }
+
+    handleViewDetailClinic = (item) => {
+        if (this.props.history) {
+            this.props.history.push(`/detail-clinic/${item.id}`)
+        }
+    }
 
     render() {
+        let { dataClinics } = this.state
         return (
-           <div className="section-medical-facility">
+            <div className="section-medical-facility">
                 <div className="section-content">
 
                     <div className="section-header">
-                        <div className="sub-header">Cơ Sở Y Tế</div>
-                        <button>Xem Thêm</button>
+                        <div className="sub-header">
+                            <FormattedMessage id="homepage.clinic" />
+                        </div>
+                        <button>
+                            <FormattedMessage id="homepage.more" />
+                        </button>
                     </div>
 
                     <Slider {...this.props.settings}>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt=" co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
-                        <div className="item-block">
-                            <div className="item">
-                                <img src={SpecialtyImg} alt="co-xuong-khop"/>
-                                <p>Cơ Xương Khớp</p>
-                            </div>
-                        </div>
+                        {
+                            dataClinics && dataClinics.length > 0 &&
+                            dataClinics.map((item, index) => (
+                                <div className="item-block" key={index}
+                                    onClick={() => this.handleViewDetailClinic(item)}
+                                >
+                                    <div className="item">
+                                        <img src={item.image} alt={item.name} />
+                                        <p>{item.name}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </Slider>
                 </div>
-           </div>
+            </div>
         );
     }
 }
@@ -87,4 +80,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MedicalFacility));

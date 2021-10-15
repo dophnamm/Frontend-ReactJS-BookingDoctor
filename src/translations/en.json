@@ -64,6 +64,8 @@
     "homepage": {
         "outstanding-doctor": "Outstanding Doctor",
         "specialty": "Popular Specialties",
+        "clinic": "Outstanding Clinics",
+        "handbook": "Handbook",
         "more": "More Info"
     },
     "manage-schedule": {

@@ -126,6 +126,15 @@ class ManageSchedule extends Component {
         })
         if (res && res.errCode === 0) {
             toast.success('Thành công .')
+            if (rangeTime && rangeTime.length > 0) {
+                rangeTime = rangeTime.map(item => {
+                    if (item.id) item.isSelected = false;
+                    return item
+                })
+                this.setState({
+                    rangeTime: rangeTime
+                })
+            }
             return
         } else {
             toast.error('Vui lòng thử lại .')
