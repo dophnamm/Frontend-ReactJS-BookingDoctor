@@ -108,9 +108,10 @@ class DoctorSchedule extends Component {
 
     render() {
         let { allDays, availableTime, isOpenModalBooking, dataScheduleTimeModal } = this.state
-        let { language } = this.props
+        let { language, handleLoadingOverlay } = this.props
         return (
             <>
+
                 <div className="main-schedule-container">
                     <div className="all-schedule mb-4">
                         <select onChange={(e) => this.handleOnChangeSelect(e)}>
@@ -166,9 +167,13 @@ class DoctorSchedule extends Component {
                         </div>
                     </div>
                 </div>
-                <BookingModal isOpenModalBooking={isOpenModalBooking}
+                <BookingModal
+                    isOpenModalBooking={isOpenModalBooking}
                     closeBookingModal={this.closeBookingModal}
-                    dataTime={dataScheduleTimeModal} />
+                    dataTime={dataScheduleTimeModal}
+                    handleLoadingOverlay={handleLoadingOverlay}
+                />
+
             </>
         );
     }

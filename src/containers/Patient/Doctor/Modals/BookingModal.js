@@ -122,6 +122,7 @@ class BookingModal extends Component {
 
     handleConfirmBooking = async () => {
         // validate input
+        this.props.handleLoadingOverlay()
         let date = new Date(this.state.birthday).getTime();
         let timeString = this.buildTimeBooking(this.props.dataTime)
         let doctorName = this.buildDoctorName(this.props.dataTime)
@@ -145,7 +146,9 @@ class BookingModal extends Component {
         if (res && res.errCode === 0) {
             toast.success('Đăng ký khám bệnh thành công .')
             this.props.closeBookingModal()
+            this.props.handleLoadingOverlay()
         } else {
+            this.props.handleLoadingOverlay()
             toast.error('Vui lòng nhập đầy đủ thông tin .')
         }
         this.setState({
@@ -155,7 +158,8 @@ class BookingModal extends Component {
             address: '',
             reason: '',
             birthday: '',
-            selectedGender: ''
+            selectedGender: '',
+            isShowLoading: false
         })
     }
 
@@ -168,6 +172,7 @@ class BookingModal extends Component {
         return (
 
             <>
+
                 <Modal
                     isOpen={isOpenModalBooking}
                     className={'booking-modal-container'}

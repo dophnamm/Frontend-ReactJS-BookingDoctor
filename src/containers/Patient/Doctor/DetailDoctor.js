@@ -7,6 +7,8 @@ import { getDetailInfoDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfo from './DoctorExtraInfo';
+import LoadingOverlay from 'react-loading-overlay';
+import RingLoader from 'react-spinners/RingLoader'
 
 class DetailDoctor extends Component {
 
@@ -15,6 +17,7 @@ class DetailDoctor extends Component {
         this.state = {
             detailDoctor: {},
             currentDoctorId: -1,
+            isShowLoading: false
         }
     }
 
@@ -37,6 +40,12 @@ class DetailDoctor extends Component {
 
     }
 
+    handleLoadingOverlay = () => {
+        this.setState({
+            isShowLoading: !this.state.isShowLoading
+        })
+    }
+
     render() {
         let { detailDoctor } = this.state
         let { language } = this.props
@@ -48,60 +57,66 @@ class DetailDoctor extends Component {
         }
         return (
             <>
-                <HomeHeader isShowBanner={false} />
-                <div className=" container doctor-detail-container mt-5">
-                    <div className="row intro-doctor">
-                        <div className="col-4 content-left ">
-                            <div className="doctor-img"
-                                style={{ backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})` }}
-                            >
-                            </div>
-                        </div>
-
-                        <div className="col-8 content-right">
-                            <h3 className="name-doctor">
-                                {
-                                    language === LANGUAGES.VI ? nameVi : nameEn
-                                }
-                            </h3>
-                            <div className="desc-doctor">
-                                {detailDoctor.Markdown && detailDoctor.Markdown.description &&
-                                    <span>
-                                        {detailDoctor.Markdown.description} <br />                                    </span>
-                                }
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="schedule-doctor row">
-                        <div className="content-left col-7">
-                            <DoctorSchedule
-                                doctorIdFromParent={this.state.currentDoctorId}
-                            />
-                        </div>
-
-                        <div className="content-right col-5">
-                            <DoctorExtraInfo
-                                doctorIdFromParent={this.state.currentDoctorId}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="main-detail">
-                    <div className="container">
-                        <div className=" detail-info-doctor">
-                            {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
-                                &&
-                                <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
+                <LoadingOverlay
+                    active={this.state.isShowLoading}
+                    spinner={<RingLoader color={'rgb(209, 228, 239)'} />}
+                >
+                    <HomeHeader isShowBanner={false} />
+                    <div className=" container doctor-detail-container mt-5">
+                        <div className="row intro-doctor">
+                            <div className="col-4 content-left ">
+                                <div className="doctor-img"
+                                    style={{ backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})` }}
+                                >
                                 </div>
-                            }
-                        </div>
-                        <div className="container comment-doctor">
+                            </div>
 
+                            <div className="col-8 content-right">
+                                <h3 className="name-doctor">
+                                    {
+                                        language === LANGUAGES.VI ? nameVi : nameEn
+                                    }
+                                </h3>
+                                <div className="desc-doctor">
+                                    {detailDoctor.Markdown && detailDoctor.Markdown.description &&
+                                        <span>
+                                            {detailDoctor.Markdown.description} <br />                                    </span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="schedule-doctor row">
+                            <div className="content-left col-7">
+                                <DoctorSchedule
+                                    handleLoadingOverlay={this.handleLoadingOverlay}
+                                    doctorIdFromParent={this.state.currentDoctorId}
+                                />
+                            </div>
+
+                            <div className="content-right col-5">
+                                <DoctorExtraInfo
+                                    doctorIdFromParent={this.state.currentDoctorId}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <HomeFooter />
+                    <div className="main-detail">
+                        <div className="container">
+                            <div className=" detail-info-doctor">
+                                {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
+                                    &&
+                                    <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
+                                    </div>
+                                }
+                            </div>
+                            <div className="container comment-doctor">
+
+                            </div>
+                        </div>
+                    </div>
+                    <HomeFooter />
+                </LoadingOverlay>
             </>
         );
     }
