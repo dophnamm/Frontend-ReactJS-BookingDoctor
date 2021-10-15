@@ -41,7 +41,8 @@
             "manage-handbook": "Quản Lý Cẩm Nang"
         },
         "doctor": {
-            "manage-schedule": "Quản Lý Kế Hoạch Khám Bệnh"
+            "manage-schedule": "Quản Lý Kế Hoạch Khám Bệnh",
+            "manage-patient": "Quản Lý Danh Sách Bệnh Nhân"
         }
     },
     "manage-user": {
@@ -70,6 +71,7 @@
     },
     "manage-schedule": {
         "title": "Kế Hoạch Khám Bệnh Của Bác Sĩ",
+        "title-patient": "Quản Lý Bệnh Nhân",
         "choose-doctor": "Chọn Bác Sĩ",
         "choose-date": "Chọn Ngày",
         "save": "Lưu Thông Tin"
@@ -125,7 +127,22 @@
             "gender": "Giới tính",
             "close": "Thoát",
             "confirm": "Xác nhận",
-            "choose": "Chọn ..."
+            "choose": "Chọn ...",
+            "bill": "Gửi Hoá Đơn Khám Bệnh"
+        },
+        "detail": {
+            "number": "STT",
+            "time": "Thời gian",
+            "fullname": "Họ và tên",
+            "address": "Địa chỉ",
+            "gender": "Giới tính",
+            "confirm": "Xác nhận",
+            "bill": "Xuất hoá đơn",
+            "nodata": "Không có lịch hẹn nào được đặt trong khoảng thời gian này .",
+            "choose-file": "Chọn file",
+            "file": "Chọn file hoá đơn",
+            "email-patient": "Email bệnh nhân",
+            "send": "Gửi"
         }
     },
     "verify": {

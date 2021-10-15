@@ -41,7 +41,8 @@
             "manage-handbook": "Manage Handbook"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor Schedule"
+            "manage-schedule": "Manage Doctor Schedule",
+            "manage-patient": "Manage Doctor Patient"
         }
     },
     "manage-user": {
@@ -70,6 +71,7 @@
     },
     "manage-schedule": {
         "title": "Manage Doctor Examination Plan",
+        "title-patient": "Patient management",
         "choose-doctor": "Choose Doctor",
         "choose-date": "Choose Date",
         "save": "Save Info"
@@ -126,7 +128,22 @@
             "gender": "Gender",
             "close": "Cancel",
             "confirm": "Confirm",
-            "choose": "Select ..."
+            "choose": "Select ...",
+            "bill": "Send Medical Invoice"
+        },
+        "detail": {
+            "number": "Number",
+            "time": "Time",
+            "fullname": "Full Name",
+            "address": "Address",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "bill": "Issue invoice",
+            "nodata": "No appointments have been booked .",
+            "choose-file": "Choose file",
+            "email-patient": "Email patient",
+            "file": "Choose bill file",
+            "send": "Send"
         }
     },
     "verify": {
