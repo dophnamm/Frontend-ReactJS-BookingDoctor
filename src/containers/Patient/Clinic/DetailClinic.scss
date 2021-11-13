@@ -1,0 +1,18 @@
+.not-container {
+	width: 100%;
+	margin: 40px 0;
+	.not-clinic {
+		padding: 30px 1rem;
+		margin: 40px auto;
+		text-align: center;
+	}
+
+	.img-not {
+		display: grid;
+		place-items: cneter;
+		img {
+			width: 200px;
+			margin: 0 auto;
+		}
+	}
+}

@@ -1,156 +1,180 @@
 {
-    "homeHeader": {
-        "specialty": "Chuyên Khoa",
-        "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
-        "health": "Cơ Sở Y Tế",
-        "selectroom": "Chọn bệnh viện phòng khám",
-        "doctor": "Bác Sĩ",
-        "selectdoctor": "Chọn bác sĩ giỏi",
-        "fee": "Gói Khám",
-        "checkhealth": "Khám sức khoẻ tổng quát",
-        "support": "Hỗ Trợ",
-        "welcome": "Xin chào, "
-    },
-    "banner": {
-        "h2-1": "NỀN TẢNG Y TẾ",
-        "h2-2": "CHĂM SÓC SỨC KHOẺ TOÀN DIỆN"
-    },
-    "search": {
-        "search": "Tìm Kiếm..."
-    },
-    "option": {
-        "itemone": "Khám Chuyên Khoa",
-        "itemtwo": "Khám Từ Xa",
-        "itemthree": "Khám Tổng Quát",
-        "itemfour": "Xét Nghiệm Y Học",
-        "itemfive": "Sức Khoẻ Tinh Thần",
-        "itemsix": "Khám Nha Khoa"
-    },
-    "menu": {
-        "admin": {
-            "manage-user": "Người Dùng",
-            "manage-doctor": "Quản Lý Bác Sĩ",
-            "manage-admin": "Quản Lý Admin",
-            "crud": "Thêm Người Dùng",
-            "crud-redux": "Thêm Bác Sĩ",
-            "clinic": "Phòng Khám",
-            "manage-clinic": "Quản Lý Phòng Khám",
-            "specialty": "Chuyên Khoa",
-            "manage-specialty": "Quản Lý Chuyên Khoa",
-            "handbook": "Cẩm Nang",
-            "manage-handbook": "Quản Lý Cẩm Nang"
-        },
-        "doctor": {
-            "manage-schedule": "Quản Lý Kế Hoạch Khám Bệnh",
-            "manage-patient": "Quản Lý Danh Sách Bệnh Nhân"
-        }
-    },
-    "manage-user": {
-        "add": "Thêm Mới Người Dùng",
-        "email": "Email",
-        "password": "Mật Khẩu",
-        "first-name": "Tên",
-        "last-name": "Tên Đệm",
-        "phone": "Số Điện Thoại",
-        "address": "Địa Chỉ",
-        "position": "Chức Danh",
-        "role": "Vai Trò",
-        "gender": "Giới Tính",
-        "image": "Ảnh Đại Diện",
-        "choose": "Chọn...",
-        "upimage": "Tải Lên",
-        "save": "Tạo",
-        "edit": "Sửa"
-    },
-    "homepage": {
-        "outstanding-doctor": "Bác Sĩ Nổi Bật",
-        "specialty": "Chuyên Khoa Phổ Biến",
-        "clinic": "Cơ Sở Y Tế Nổi Bật",
-        "handbook": "Cẩm Nang",
-        "more": "Xem Thêm"
-    },
-    "manage-schedule": {
-        "title": "Kế Hoạch Khám Bệnh Của Bác Sĩ",
-        "title-patient": "Quản Lý Bệnh Nhân",
-        "choose-doctor": "Chọn Bác Sĩ",
-        "choose-date": "Chọn Ngày",
-        "save": "Lưu Thông Tin"
-    },
-    "detail-doctor": {
-        "calendar": "Lịch Khám Bệnh",
-        "text": "Không có lịch hẹn trong khoảng thời gian này, vui  lòng chọn thời gian khác .",
-        "choose": "Chọn",
-        "booking": "và đặt lịch (Miễn phí)."
-    },
-    "admin": {
-        "manage-doctor": {
-            "title": "Tạo Mới Thông Tin",
-            "select-doctor": "Chọn Bác Sĩ",
-            "select-doctor-plhd": "Chọn bác sĩ ...",
-            "info": "Thông Tin Giới Thiệu",
-            "save-info": "Lưu Thông Tin",
-            "add-info": "Tạo Thông Tin",
-            "price": "Gía Khám Bệnh",
-            "price-plhd": "Gía khám bệnh ...",
-            "payment": "Phương Thức Thanh Toán",
-            "payment-plhd": "Phương thức thanh toán ...",
-            "province": "Chọn Tỉnh Thành",
-            "province-plhd": "Chọn tỉnh thành ...",
-            "nameClinic": "Tên Phòng Khám",
-            "addressClinic": "Địa Chỉ Phòng Khám",
-            "specialty": "Chọn Chuyên Khoa",
-            "specialty-plhd": "Chọn chuyên khoa ...",
-            "clinic": "Chọn Phòng Khám",
-            "clinic-plhd": "Chọn phòng khám ...",
-            "note": "Ghi Chú"
-        }
-    },
-    "patient": {
-        "extra-info": {
-            "address-clinic": "Địa chỉ khám",
-            "price": "Giá khám",
-            "show": "Xem thông tin",
-            "hide": "Ẩn thông tin",
-            "infomation": "Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ ."
-        },
-        "booking-modal": {
-            "title": "Thông tin đặt lịch khám bệnh",
-            "book": "Đặt lịch khám",
-            "book-free": "Đặt lịch miễn phí",
-            "price": "Giá khám",
-            "fullname": "Họ tên bệnh nhân",
-            "phone": "Số điện thoại",
-            "address": "Địa chỉ liên hệ",
-            "email": "Địa chỉ email",
-            "reason": "Lý do khám",
-            "birthday": "Chọn ngày sinh",
-            "gender": "Giới tính",
-            "close": "Thoát",
-            "confirm": "Xác nhận",
-            "choose": "Chọn ...",
-            "bill": "Gửi Hoá Đơn Khám Bệnh"
-        },
-        "detail": {
-            "number": "STT",
-            "time": "Thời gian",
-            "fullname": "Họ và tên",
-            "address": "Địa chỉ",
-            "gender": "Giới tính",
-            "confirm": "Xác nhận",
-            "bill": "Xuất hoá đơn",
-            "nodata": "Không có lịch hẹn nào được đặt trong khoảng thời gian này .",
-            "choose-file": "Chọn file",
-            "file": "Chọn file hoá đơn",
-            "email-patient": "Email bệnh nhân",
-            "send": "Gửi"
-        }
-    },
-    "verify": {
-        "success": " Thành Công 😀 ",
-        "error": "Xin Lỗi 😔",
-        "title-success-one": "Lịch khám bệnh của bạn đã được xác nhận thành công",
-        "title-success-two": "Khi đến khám nhớ đeo khẩu trang và tuân thủ 5K để phòng chống dịch COVID-19 .",
-        "title-error-one": "Lịch đã được xác nhận hoặc không tồn tại. Vui Lòng liên hệ",
-        "title-error-two": "để biết thêm thông tin chi tiết ."
-    }
+	"homeHeader": {
+		"specialty": "Chuyên Khoa",
+		"searchdoctor": "Tìm bác sĩ theo chuyên khoa",
+		"health": "Cơ Sở Y Tế",
+		"selectroom": "Chọn bệnh viện phòng khám",
+		"doctor": "Bác Sĩ",
+		"selectdoctor": "Chọn bác sĩ giỏi",
+		"fee": "Gói Khám",
+		"checkhealth": "Khám sức khoẻ tổng quát",
+		"support": "Hỗ Trợ",
+		"welcome": "Xin chào, "
+	},
+	"banner": {
+		"h2-1": "NỀN TẢNG Y TẾ",
+		"h2-2": "CHĂM SÓC SỨC KHOẺ TOÀN DIỆN"
+	},
+	"search": {
+		"search": "Tìm Kiếm..."
+	},
+	"option": {
+		"itemone": "Khám Chuyên Khoa",
+		"itemtwo": "Khám Từ Xa",
+		"itemthree": "Khám Tổng Quát",
+		"itemfour": "Xét Nghiệm Y Học",
+		"itemfive": "Sức Khoẻ Tinh Thần",
+		"itemsix": "Khám Nha Khoa"
+	},
+	"menu": {
+		"admin": {
+			"manage-user": "Người Dùng",
+			"manage-doctor": "Quản Lý Bác Sĩ",
+			"manage-admin": "Quản Lý Admin",
+			"crud": "Thêm Người Dùng",
+			"crud-redux": "Thêm Bác Sĩ",
+			"clinic": "Phòng Khám",
+			"manage-clinic": "Quản Lý Phòng Khám",
+			"specialty": "Chuyên Khoa",
+			"manage-specialty": "Quản Lý Chuyên Khoa",
+			"handbook": "Cẩm Nang",
+			"manage-handbook": "Quản Lý Cẩm Nang"
+		},
+		"doctor": {
+			"manage-schedule": "Quản Lý Kế Hoạch Khám Bệnh",
+			"manage-patient": "Quản Lý Danh Sách Bệnh Nhân"
+		}
+	},
+	"manage-user": {
+		"add": "Thêm Mới Người Dùng",
+		"email": "Email",
+		"password": "Mật Khẩu",
+		"first-name": "Tên",
+		"last-name": "Tên Đệm",
+		"phone": "Số Điện Thoại",
+		"address": "Địa Chỉ",
+		"position": "Chức Danh",
+		"role": "Vai Trò",
+		"gender": "Giới Tính",
+		"image": "Ảnh Đại Diện",
+		"choose": "Chọn...",
+		"upimage": "Tải Lên",
+		"save": "Tạo",
+		"edit": "Sửa"
+	},
+	"homepage": {
+		"outstanding-doctor": "Bác Sĩ Nổi Bật",
+		"specialty": "Chuyên Khoa Phổ Biến",
+		"clinic": "Cơ Sở Y Tế Nổi Bật",
+		"handbook": "Cẩm Nang",
+		"more": "Xem Thêm"
+	},
+	"manage-schedule": {
+		"title": "Kế Hoạch Khám Bệnh Của Bác Sĩ",
+		"title-patient": "Quản Lý Bệnh Nhân",
+		"choose-doctor": "Chọn Bác Sĩ",
+		"choose-date": "Chọn Ngày",
+		"save": "Lưu Thông Tin"
+	},
+	"detail-doctor": {
+		"calendar": "Lịch Khám Bệnh",
+		"text": "Không có lịch hẹn trong khoảng thời gian này, vui  lòng chọn thời gian khác .",
+		"choose": "Chọn",
+		"booking": "và đặt lịch (Miễn phí)."
+	},
+	"admin": {
+		"manage-doctor": {
+			"title": "Tạo Mới Thông Tin",
+			"select-doctor": "Chọn Bác Sĩ",
+			"select-doctor-plhd": "Chọn bác sĩ ...",
+			"info": "Thông Tin Giới Thiệu",
+			"save-info": "Lưu Thông Tin",
+			"add-info": "Tạo Thông Tin",
+			"price": "Gía Khám Bệnh",
+			"price-plhd": "Gía khám bệnh ...",
+			"payment": "Phương Thức Thanh Toán",
+			"payment-plhd": "Phương thức thanh toán ...",
+			"province": "Chọn Tỉnh Thành",
+			"province-plhd": "Chọn tỉnh thành ...",
+			"nameClinic": "Tên Phòng Khám",
+			"addressClinic": "Địa Chỉ Phòng Khám",
+			"specialty": "Chọn Chuyên Khoa",
+			"specialty-plhd": "Chọn chuyên khoa ...",
+			"clinic": "Chọn Phòng Khám",
+			"clinic-plhd": "Chọn phòng khám ...",
+			"note": "Ghi Chú"
+		}
+	},
+	"patient": {
+		"extra-info": {
+			"address-clinic": "Địa chỉ khám",
+			"price": "Giá khám",
+			"show": "Xem thông tin",
+			"hide": "Ẩn thông tin",
+			"infomation": "Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ ."
+		},
+		"booking-modal": {
+			"title": "Thông tin đặt lịch khám bệnh",
+			"book": "Đặt lịch khám",
+			"book-free": "Đặt lịch miễn phí",
+			"price": "Giá khám",
+			"fullname": "Họ tên bệnh nhân",
+			"phone": "Số điện thoại",
+			"address": "Địa chỉ liên hệ",
+			"email": "Địa chỉ email",
+			"reason": "Lý do khám",
+			"birthday": "Chọn ngày sinh",
+			"gender": "Giới tính",
+			"close": "Thoát",
+			"confirm": "Xác nhận",
+			"choose": "Chọn ...",
+			"bill": "Gửi Hoá Đơn Khám Bệnh"
+		},
+		"detail": {
+			"number": "STT",
+			"time": "Thời gian",
+			"fullname": "Họ và tên",
+			"address": "Địa chỉ",
+			"gender": "Giới tính",
+			"confirm": "Xác nhận",
+			"bill": "Xuất hoá đơn",
+			"nodata": "Không có lịch hẹn nào được đặt trong khoảng thời gian này .",
+			"choose-file": "Chọn file",
+			"file": "Chọn file hoá đơn",
+			"email-patient": "Email bệnh nhân",
+			"send": "Gửi"
+		}
+	},
+	"verify": {
+		"success": " Thành Công 😀 ",
+		"error": "Xin Lỗi 😔",
+		"title-success-one": "Lịch khám bệnh của bạn đã được xác nhận thành công",
+		"title-success-two": "Khi đến khám nhớ đeo khẩu trang và tuân thủ 5K để phòng chống dịch COVID-19 .",
+		"title-error-one": "Lịch đã được xác nhận hoặc không tồn tại. Vui Lòng liên hệ",
+		"title-error-two": "để biết thêm thông tin chi tiết ."
+	},
+	"other": {
+		"not": "Hiện tại chưa có bác sĩ nào trong khoa này !",
+		"not-clinic": "Hiện tại phòng khám chưa có bác sĩ !"
+	},
+	"footer": {
+		"site-link": {
+			"site": "Các liên kết",
+			"home": "Trang chủ",
+			"about-us": "Về chúng tôi",
+			"services": "Dịch vụ",
+			"doctors": "Bác sĩ",
+			"blog": "Bài viết"
+		},
+		"our-services": {
+			"our": "Dịch vụ của chúng tôi",
+			"dermetology": "Da liễu",
+			"cardiology": "Tim mạch",
+			"surgery": "Phẫu thuật",
+			"family-medicine": "Khám gia đình"
+		},
+		"contact": {
+			"contact": "Liên hệ"
+		}
+	}
 }

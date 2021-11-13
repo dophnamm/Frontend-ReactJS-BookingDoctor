@@ -1,157 +1,181 @@
 {
-    "homeHeader": {
-        "specialty": "Medical Specialty",
-        "searchdoctor": "Find a doctor by specialty",
-        "health": "Health Facilities",
-        "selectroom": "Choose hospital clinic",
-        "doctor": "Doctor",
-        "selectdoctor": "Choose a good doctor",
-        "fee": "Checkup Package",
-        "checkhealth": "General health check",
-        "support": "Support",
-        "welcome": "Welcome, "
-    },
-    "banner": {
-        "h2-1": "MEDICAL PLATFORM",
-        "h2-2": "COMPREHENSIVE HEALTH CARE"
-    },
-    "search": {
-        "search": "Search..."
-    },
-    "option": {
-        "itemone": "Specialist Examination",
-        "itemtwo": "Remote Examination",
-        "itemthree": "General Examination",
-        "itemfour": "Medical Tests",
-        "itemfive": "Mental Health",
-        "itemsix": "Dental Examination"
-    },
-    "menu": {
-        "admin": {
-            "manage-user": "User",
-            "manage-doctor": "Manage Doctors",
-            "manage-admin": "Manage Admin",
-            "crud": "Add User",
-            "crud-redux": "Add Doctors",
-            "clinic": "Clinic",
-            "manage-clinic": "Manage Clinic",
-            "specialty": "Specialty",
-            "manage-specialty": "Manage Specialties",
-            "handbook": "Handbook",
-            "manage-handbook": "Manage Handbook"
-        },
-        "doctor": {
-            "manage-schedule": "Manage Doctor Schedule",
-            "manage-patient": "Manage Doctor Patient"
-        }
-    },
-    "manage-user": {
-        "add": "Add New A User",
-        "email": "Email",
-        "password": "Password",
-        "first-name": "First Name",
-        "last-name": "Last Name",
-        "phone": "Phone Number",
-        "address": "Address",
-        "position": "Position",
-        "role": "Role",
-        "gender": "Gender",
-        "image": "Avatar",
-        "choose": "Choose...",
-        "upimage": "Upload",
-        "save": "Save",
-        "edit": "Edit"
-    },
-    "homepage": {
-        "outstanding-doctor": "Outstanding Doctor",
-        "specialty": "Popular Specialties",
-        "clinic": "Outstanding Clinics",
-        "handbook": "Handbook",
-        "more": "More Info"
-    },
-    "manage-schedule": {
-        "title": "Manage Doctor Examination Plan",
-        "title-patient": "Patient management",
-        "choose-doctor": "Choose Doctor",
-        "choose-date": "Choose Date",
-        "save": "Save Info"
-    },
-    "detail-doctor": {
-        "calendar": "Calendar",
-        "text": "No appointment scheduled during this time, please choose another time.",
-        "choose": "Choose",
-        "booking": "and book (Free)."
-    },
-    "admin": {
-        "manage-doctor": {
-            "title": "Create More Infomation",
-            "select-doctor": "Select Doctor",
-            "select-doctor-plhd": "Select doctor ...",
-            "info": "Infoduction",
-            "save-info": "Save Info",
-            "add-info": "Create Info",
-            "price": "Price",
-            "price-plhd": "Price ...",
-            "payment": "Choose Payment",
-            "payment-plhd": "Choose payment ...",
-            "province": "Choose Province",
-            "province-plhd": "Choose province ...",
-            "nameClinic": "Clinic Name",
-            "addressClinic": "Clinic Address",
-            "specialty": "Choose Specialties",
-            "specialty-plhd": "Choose specialties ...",
-            "clinic": "Choose Clinic",
-            "clinic-plhd": "Choose clinic ...",
-            "note": "Note"
-        }
-    },
-    "patient": {
-        "extra-info": {
-            "address-clinic": "Address Clinic",
-            "price": "Price",
-            "show": "Show infomation",
-            "hide": "Hide infomation",
-            "infomation": "The patient can pay the cost in cash and by swiping card."
-        },
-        "booking-modal": {
-            "title": "Hospital information calendar",
-            "book": "Booking",
-            "book-free": "Free appointment",
-            "price": "Price",
-            "fullname": "Patient Name",
-            "phone": "Phone number",
-            "address": "Address",
-            "email": "Email address",
-            "email-plhd": "Email address",
-            "reason": "Medical examination reason",
-            "birthday": "Birthday",
-            "gender": "Gender",
-            "close": "Cancel",
-            "confirm": "Confirm",
-            "choose": "Select ...",
-            "bill": "Send Medical Invoice"
-        },
-        "detail": {
-            "number": "Number",
-            "time": "Time",
-            "fullname": "Full Name",
-            "address": "Address",
-            "gender": "Gender",
-            "confirm": "Confirm",
-            "bill": "Issue invoice",
-            "nodata": "No appointments have been booked .",
-            "choose-file": "Choose file",
-            "email-patient": "Email patient",
-            "file": "Choose bill file",
-            "send": "Send"
-        }
-    },
-    "verify": {
-        "success": " Success 😀 ",
-        "error": "So Sorry 😔",
-        "title-success-one": "Your appointment has been successfully confirmed",
-        "title-success-two": "When visiting the clinic, remember to wear a mask and adhere to 5K to prevent the COVID-19",
-        "title-error-one": "The calendar is confirmed or does not exist. Please contact",
-        "title-error-two": "for more detailed information ."
-    }
+	"homeHeader": {
+		"specialty": "Medical Specialty",
+		"searchdoctor": "Find a doctor by specialty",
+		"health": "Health Facilities",
+		"selectroom": "Choose hospital clinic",
+		"doctor": "Doctor",
+		"selectdoctor": "Choose a good doctor",
+		"fee": "Checkup Package",
+		"checkhealth": "General health check",
+		"support": "Support",
+		"welcome": "Welcome, "
+	},
+	"banner": {
+		"h2-1": "MEDICAL PLATFORM",
+		"h2-2": "COMPREHENSIVE HEALTH CARE"
+	},
+	"search": {
+		"search": "Search..."
+	},
+	"option": {
+		"itemone": "Specialist Examination",
+		"itemtwo": "Remote Examination",
+		"itemthree": "General Examination",
+		"itemfour": "Medical Tests",
+		"itemfive": "Mental Health",
+		"itemsix": "Dental Examination"
+	},
+	"menu": {
+		"admin": {
+			"manage-user": "User",
+			"manage-doctor": "Manage Doctors",
+			"manage-admin": "Manage Admin",
+			"crud": "Add User",
+			"crud-redux": "Add Doctors",
+			"clinic": "Clinic",
+			"manage-clinic": "Manage Clinic",
+			"specialty": "Specialty",
+			"manage-specialty": "Manage Specialties",
+			"handbook": "Handbook",
+			"manage-handbook": "Manage Handbook"
+		},
+		"doctor": {
+			"manage-schedule": "Manage Doctor Schedule",
+			"manage-patient": "Manage Doctor Patient"
+		}
+	},
+	"manage-user": {
+		"add": "Add New A User",
+		"email": "Email",
+		"password": "Password",
+		"first-name": "First Name",
+		"last-name": "Last Name",
+		"phone": "Phone Number",
+		"address": "Address",
+		"position": "Position",
+		"role": "Role",
+		"gender": "Gender",
+		"image": "Avatar",
+		"choose": "Choose...",
+		"upimage": "Upload",
+		"save": "Save",
+		"edit": "Edit"
+	},
+	"homepage": {
+		"outstanding-doctor": "Outstanding Doctor",
+		"specialty": "Popular Specialties",
+		"clinic": "Outstanding Clinics",
+		"handbook": "Handbook",
+		"more": "More Info"
+	},
+	"manage-schedule": {
+		"title": "Manage Doctor Examination Plan",
+		"title-patient": "Patient management",
+		"choose-doctor": "Choose Doctor",
+		"choose-date": "Choose Date",
+		"save": "Save Info"
+	},
+	"detail-doctor": {
+		"calendar": "Calendar",
+		"text": "No appointment scheduled during this time, please choose another time.",
+		"choose": "Choose",
+		"booking": "and book (Free)."
+	},
+	"admin": {
+		"manage-doctor": {
+			"title": "Create More Infomation",
+			"select-doctor": "Select Doctor",
+			"select-doctor-plhd": "Select doctor ...",
+			"info": "Infoduction",
+			"save-info": "Save Info",
+			"add-info": "Create Info",
+			"price": "Price",
+			"price-plhd": "Price ...",
+			"payment": "Choose Payment",
+			"payment-plhd": "Choose payment ...",
+			"province": "Choose Province",
+			"province-plhd": "Choose province ...",
+			"nameClinic": "Clinic Name",
+			"addressClinic": "Clinic Address",
+			"specialty": "Choose Specialties",
+			"specialty-plhd": "Choose specialties ...",
+			"clinic": "Choose Clinic",
+			"clinic-plhd": "Choose clinic ...",
+			"note": "Note"
+		}
+	},
+	"patient": {
+		"extra-info": {
+			"address-clinic": "Address Clinic",
+			"price": "Price",
+			"show": "Show infomation",
+			"hide": "Hide infomation",
+			"infomation": "The patient can pay the cost in cash and by swiping card."
+		},
+		"booking-modal": {
+			"title": "Hospital information calendar",
+			"book": "Booking",
+			"book-free": "Free appointment",
+			"price": "Price",
+			"fullname": "Patient Name",
+			"phone": "Phone number",
+			"address": "Address",
+			"email": "Email address",
+			"email-plhd": "Email address",
+			"reason": "Medical examination reason",
+			"birthday": "Birthday",
+			"gender": "Gender",
+			"close": "Cancel",
+			"confirm": "Confirm",
+			"choose": "Select ...",
+			"bill": "Send Medical Invoice"
+		},
+		"detail": {
+			"number": "Number",
+			"time": "Time",
+			"fullname": "Full Name",
+			"address": "Address",
+			"gender": "Gender",
+			"confirm": "Confirm",
+			"bill": "Issue invoice",
+			"nodata": "No appointments have been booked .",
+			"choose-file": "Choose file",
+			"email-patient": "Email patient",
+			"file": "Choose bill file",
+			"send": "Send"
+		}
+	},
+	"verify": {
+		"success": " Success 😀 ",
+		"error": "So Sorry 😔",
+		"title-success-one": "Your appointment has been successfully confirmed",
+		"title-success-two": "When visiting the clinic, remember to wear a mask and adhere to 5K to prevent the COVID-19",
+		"title-error-one": "The calendar is confirmed or does not exist. Please contact",
+		"title-error-two": "for more detailed information ."
+	},
+	"other": {
+		"not": "There are currently no doctors in the department !",
+		"not-clinic": "The clinic does not have a doctor at the moment !"
+	},
+	"footer": {
+		"site-link": {
+			"site": "Site links",
+			"home": "Home",
+			"about-us": "About us",
+			"services": "Services",
+			"doctors": "Doctors",
+			"blog": "Blog"
+		},
+		"our-services": {
+			"our": "Our Services",
+			"dermetology": "Dermetology",
+			"cardiology": "Cardiology",
+			"surgery": "Surgery",
+			"family-medicine": "Family medicine"
+		},
+		"contact": {
+			"contact": "Contact"
+		}
+	}
 }

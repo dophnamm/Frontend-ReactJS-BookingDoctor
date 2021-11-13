@@ -1,91 +1,96 @@
 @import "../../../styles/_variables.scss";
 
 .detail-specialty-container {
-    .desc-specialty {
-        background-color   : $light;
-        padding            : 2rem;
-        border-radius      : 8px;
-        // max-height      : 300px;
-        overflow           : hidden;
-    }
+	.desc-specialty {
+		background-color: $light;
+		padding: 2rem;
+		border-radius: 8px;
+		// max-height      : 300px;
+		overflow: hidden;
+	}
 
-    .search-location {
-        .selected-location {
-            background-color: transparent;
-            border          : none;
-            border-bottom   : 1px solid $dark-blue;
-            border-radius   : 0;
-            padding         : .8rem 0;
-            outline         : none;
+	.search-location {
+		.selected-location {
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid $dark-blue;
+			border-radius: 0;
+			padding: 0.8rem 0;
+			outline: none;
+		}
+	}
 
-        }
-    }
+	.not-doctor {
+		padding: 30px 1rem;
+		margin: 110px auto;
+		display: block;
+		text-align: center;
+	}
 
-    .detail-item {
-        margin : 2rem 0;
-        padding: 0.5rem 1rem;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-            rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        border-radius: 8px;
+	.detail-item {
+		margin: 2rem 0;
+		padding: 0.5rem 1rem;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+		border-radius: 8px;
 
-        .content-left {
-            .doctor-info {
-                display: flex;
-                gap    : 0 2rem;
-                padding: 2rem;
+		.content-left {
+			.doctor-info {
+				display: flex;
+				gap: 0 2rem;
+				padding: 2rem;
 
-                .doctor-img {
-                    width            : 150px;
-                    height           : 150px;
-                    background-size  : cover;
-                    background-repeat: no-repeat;
-                    flex-shrink      : 0;
-                }
+				.doctor-img {
+					width: 150px;
+					height: 150px;
+					background-size: cover;
+					background-repeat: no-repeat;
+					flex-shrink: 0;
+				}
 
-                .intro-doctor {
-                    .booking-schedule {
-                        display: none;
-                    }
+				.intro-doctor {
+					.booking-schedule {
+						display: none;
+					}
 
-                    .name-doctor {
-                        font-size: 20px;
-                    }
+					.name-doctor {
+						font-size: 20px;
+					}
 
-                    p {
-                        display: none;
-                    }
+					p {
+						display: none;
+					}
 
-                    .description-modal {
-                        text-align: justify;
-                        margin-top: 2rem;
-                    }
-                }
-            }
+					.description-modal {
+						text-align: justify;
+						margin-top: 2rem;
+					}
+				}
+			}
 
-            .see-more {
-                a {
-                    text-decoration : none;
-                    padding         : .5rem 1rem;
-                    text-align      : right;
-                    width           : fit-content;
-                    background-color: $light;
-                    color           : $dark-blue;
-                    float           : right;
-                    margin-right    : 2rem;
-                    border-radius   : 5px;
-                    transition      : all .3s ease;
-                    cursor          : pointer;
+			.see-more {
+				a {
+					text-decoration: none;
+					padding: 0.5rem 1rem;
+					text-align: right;
+					width: fit-content;
+					background-color: $light;
+					color: $dark-blue;
+					float: right;
+					margin-right: 2rem;
+					border-radius: 5px;
+					transition: all 0.3s ease;
+					cursor: pointer;
 
-                    &:hover {
-                        color           : $light;
-                        background-color: $dark-blue;
-                    }
-                }
-            }
+					&:hover {
+						color: $light;
+						background-color: $dark-blue;
+					}
+				}
+			}
 
-            .price {
-                display: none;
-            }
-        }
-    }
+			.price {
+				display: none;
+			}
+		}
+	}
 }
