@@ -21,6 +21,14 @@ class HomePage extends Component {
 				{
 					breakpoint: 600,
 					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						initialSlide: 3,
+					},
+				},
+				{
+					breakpoint: 375,
+					settings: {
 						slidesToShow: 2,
 						slidesToScroll: 2,
 						initialSlide: 2,
@@ -36,7 +44,7 @@ class HomePage extends Component {
 					<MedicalFacility settings={settings} />
 					<OutStandingDoctor settings={settings} />
 					{/* <HandBook settings={settings}/> */}
-					{/* <About /> */}
+					<About />
 					<HomeFooter />
 				</div>
 			</div>

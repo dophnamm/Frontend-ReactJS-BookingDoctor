@@ -194,12 +194,12 @@ ul {
 			width: 375px !important;
 
 			.footer-logo {
-				width: fit-content;
 				h2 {
 					font-size: 18px;
 				}
 			}
 			.main-link {
+				margin: 0;
 				.item-link {
 					.title-link {
 						font-size: 16px;
@@ -208,14 +208,6 @@ ul {
 					ul {
 						li {
 							font-size: 14px;
-						}
-					}
-				}
-
-				.item-link:last-child {
-					ul {
-						li:nth-child(2) {
-							width: fit-content;
 						}
 					}
 				}

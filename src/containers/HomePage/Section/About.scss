@@ -48,3 +48,9 @@
 		}
 	}
 }
+
+@media only screen and (device-width: 375px) {
+	.section-about {
+		display: none;
+	}
+}

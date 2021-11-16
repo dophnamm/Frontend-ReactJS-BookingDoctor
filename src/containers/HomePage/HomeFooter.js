@@ -16,7 +16,7 @@ class HomeFooter extends Component {
 				<div className="footer-total-services">
 					<div className="container">
 						<div className="row row-rps">
-							<div className="col-4">
+							<div className="col-4 mobile-col-4">
 								<div className="main-link-logo">
 									<div className="footer-logo">
 										<img src={logo} alt="logo-img" />
@@ -40,7 +40,7 @@ class HomeFooter extends Component {
 									</div>
 								</div>
 							</div>
-							<div className="col-8">
+							<div className="col-8 mobile-col-8">
 								<div className="main-link">
 									<div className="item-link">
 										<h3 className="title-link">

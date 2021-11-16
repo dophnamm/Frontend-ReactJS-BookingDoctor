@@ -60,7 +60,7 @@ class DetailDoctor extends Component {
 			<>
 				<LoadingOverlay active={this.state.isShowLoading} spinner={<RingLoader color={"rgb(209, 228, 239)"} />}>
 					<HomeHeader isShowBanner={false} />
-					<div className=" container doctor-detail-container mt-5">
+					<div className=" container doctor-detail-container mobile-container mt-5">
 						<div className="row intro-doctor">
 							<div className="col-4 content-left ">
 								<div
@@ -112,7 +112,7 @@ class DetailDoctor extends Component {
 									></div>
 								)}
 							</div>
-							<div className="container comment-doctor">
+							<div className="comment-doctor">
 								<Comment dataHref={currentURL} width={"100%"} />
 							</div>
 						</div>

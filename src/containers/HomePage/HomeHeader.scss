@@ -356,8 +356,9 @@
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (device-width: 375px) {
 	.home-header-container {
+		width: 375px;
 		.center-content-rps {
 			display: none;
 		}
