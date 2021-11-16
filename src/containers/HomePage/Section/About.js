@@ -14,8 +14,8 @@ class About extends Component {
 
 						<div className="about-right">
 							<iframe
-								width="1109"
-								height="624"
+								// width="1109"
+								// height="624"
 								src="https://www.youtube.com/embed/wQ2TN_gI3sE"
 								title="YouTube video player"
 								frameBorder="0"

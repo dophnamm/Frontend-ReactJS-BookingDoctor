@@ -15,7 +15,7 @@ class HomeFooter extends Component {
 			<>
 				<div className="footer-total-services">
 					<div className="container">
-						<div className="row">
+						<div className="row row-rps">
 							<div className="col-4">
 								<div className="main-link-logo">
 									<div className="footer-logo">

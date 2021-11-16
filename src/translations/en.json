@@ -67,7 +67,8 @@
 		"specialty": "Popular Specialties",
 		"clinic": "Outstanding Clinics",
 		"handbook": "Handbook",
-		"more": "More Info"
+		"more": "More Info",
+		"login": "Login"
 	},
 	"manage-schedule": {
 		"title": "Manage Doctor Examination Plan",

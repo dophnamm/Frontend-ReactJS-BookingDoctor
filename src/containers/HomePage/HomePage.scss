@@ -2,116 +2,164 @@
 
 // Reset
 .slick-prev {
-    left: 7px !important;
+	left: 7px !important;
 }
 
 .slick-next {
-    left: 60px !important;
+	left: 60px !important;
 }
 
 .slick-next,
 .slick-prev {
-    background-color: $light !important;
-    border-radius   : 5px;
-    top             : -50px !important;
-    height          : 50px !important;
-    width           : 50px !important;
+	background-color: $light !important;
+	border-radius: 5px;
+	top: -50px !important;
+	height: 50px !important;
+	width: 50px !important;
 }
 
 .slick-prev::before {
-    content    : "\f104" !important;
-    font-family: 'Font Awesome 5 Free' !important;
-    font-weight: 900;
-    font-size  : 30px !important;
-    color      : $dark-blue !important;
+	content: "\f104" !important;
+	font-family: "Font Awesome 5 Free" !important;
+	font-weight: 900;
+	font-size: 30px !important;
+	color: $dark-blue !important;
 }
 
 .slick-next::before {
-    content    : "\f105" !important;
-    font-family: 'Font Awesome 5 Free' !important;
-    font-weight: 900;
-    font-size  : 30px !important;
-    color      : $dark-blue !important;
+	content: "\f105" !important;
+	font-family: "Font Awesome 5 Free" !important;
+	font-weight: 900;
+	font-size: 30px !important;
+	color: $dark-blue !important;
 }
-
 
 //*************
 .section-content {
-    max-width: 1200px;
-    width    : 100%;
-    margin   : 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
 
-    .section-header {
-        display        : flex;
-        align-items    : center;
-        justify-content: space-between;
-        font-family    : Montserrat;
-        margin-bottom  : 100px;
+	.section-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: Montserrat;
+		margin-bottom: 100px;
 
-        .sub-header {
-            font-size  : 24px;
-            font-weight: 700;
-            color      : $dark-blue;
-        }
+		.sub-header {
+			font-size: 24px;
+			font-weight: 700;
+			color: $dark-blue;
+		}
 
-        button {
-            outline         : none;
-            border          : none;
-            padding         : .5rem 2rem;
-            color           : $dark-blue;
-            background-color: $light;
-            border-radius   : 5px;
-            transition      : all .3s ease;
+		button {
+			outline: none;
+			border: none;
+			padding: 0.5rem 2rem;
+			color: $dark-blue;
+			background-color: $light;
+			border-radius: 5px;
+			transition: all 0.3s ease;
 
-            &:hover {
-                background-color: $dark-blue;
-                color           : $light;
-            }
-        }
-    }
+			&:hover {
+				background-color: $dark-blue;
+				color: $light;
+			}
+		}
+	}
 
-    .item-block {
+	.item-block {
+		.item {
+			height: 100%;
+			padding: 2rem;
+			margin: 0 0.4rem;
+			background-color: $light;
+			border-radius: 10px;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			overflow: hidden;
 
-        .item {
-            height          : 100%;
-            padding         : 2rem;
-            margin          : 0 .4rem;
-            background-color: $light;
-            border-radius   : 10px;
-            text-align      : center;
-            cursor          : pointer;
-            transition      : all .3s ease;
-            overflow        : hidden;
+			&:hover {
+				background-color: white;
+			}
 
-            &:hover {
-                background-color: white;
-            }
+			.bg-img {
+				width: 100%;
+				height: 200px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				margin-bottom: 2rem;
+			}
 
-            .bg-img {
-                width            : 100%;
-                height           : 200px;
-                background-size  : cover;
-                background-repeat: no-repeat;
-                margin-bottom    : 2rem;
-            }
+			img {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
 
-            img {
-                width        : 100%;
-                margin-bottom: 1rem;
-            }
+			p {
+				font-family: Montserrat;
+				margin-bottom: 0;
+				background-color: $light-blue;
+				padding: 0.4rem 1rem;
+				border-radius: 5px;
+				font-size: 16px;
+				color: $light;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+	}
+}
 
-            p {
-                font-family     : Montserrat;
-                margin-bottom   : 0;
-                background-color: $light-blue;
-                padding         : .4rem 1rem;
-                border-radius   : 5px;
-                font-size       : 16px;
-                color           : $light;
-                white-space     : nowrap;
-                text-overflow   : ellipsis;
-                overflow        : hidden;
-            }
-        }
-    }
+// RESPONSIVE
+@media screen and (max-width: 1024px) {
+	.section-content {
+		max-width: 960px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.section-content {
+		max-width: 720px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section-content {
+		max-width: 520px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.section-content {
+		max-width: 320px;
+
+		.section-header {
+			.sub-header {
+				font-size: 16px;
+			}
+
+			button {
+				padding: 0.5rem 1rem;
+				font-size: 12px;
+			}
+		}
+
+		.slick-next,
+		.slick-prev {
+			width: 30px !important;
+			height: 30px !important;
+
+			&::before {
+				font-size: 20px !important;
+			}
+		}
+
+		.slick-next {
+			left: 44px !important;
+		}
+	}
 }
