@@ -69,14 +69,13 @@
 
 			.see-more {
 				a {
-					text-decoration: none;
-					padding: 0.5rem 1rem;
-					text-align: right;
 					width: fit-content;
-					background-color: $light;
-					color: $dark-blue;
 					float: right;
 					margin-right: 2rem;
+					text-decoration: none;
+					padding: 0.5rem 1rem;
+					background-color: $light;
+					color: $dark-blue;
 					border-radius: 5px;
 					transition: all 0.3s ease;
 					cursor: pointer;
@@ -90,6 +89,165 @@
 
 			.price {
 				display: none;
+			}
+		}
+	}
+}
+
+// Responsive
+// Tablet and PC
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+	.detail-specialty-container {
+		.detail-item {
+			.content-left {
+				.doctor-info {
+					flex-direction: column;
+					.intro-doctor {
+						.name-doctor {
+							font-size: 18px;
+						}
+
+						.description-modal {
+							font-size: 13px;
+						}
+					}
+				}
+
+				.see-more {
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.content-right {
+				.main-schedule-container {
+					.all-schedule {
+						select {
+							font-size: 14px;
+						}
+					}
+
+					.all-available-time {
+						.text-calendar {
+							font-size: 13px;
+						}
+
+						.time-content {
+							.container-btn {
+								.choose-time {
+									min-width: 140px;
+									font-size: 13px;
+								}
+							}
+
+							.not-data {
+								p {
+									font-size: 12px;
+								}
+							}
+
+							img {
+								transform: translateX(-50%);
+							}
+						}
+					}
+				}
+
+				.main-extra-info {
+					.content-up {
+						.address-doctor {
+							font-size: 18px;
+						}
+
+						.name-clinic {
+							font-size: 14px;
+						}
+
+						.detail-address {
+							font-size: 12px;
+						}
+					}
+
+					.content-down {
+						.title-price {
+							span,
+							p,
+							h3 {
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+@media (max-width: 46.1875em) {
+	.detail-specialty-container {
+		.detail-item {
+			.row {
+				flex-direction: column;
+
+				.content-left {
+					.doctor-info {
+						.doctor-img {
+							margin: 0 auto;
+						}
+
+						.intro-doctor {
+							.name-doctor {
+								text-align: center;
+							}
+						}
+					}
+
+					.see-more {
+						width: 100%;
+
+						a {
+							width: 100%;
+							display: block;
+							text-align: center;
+							margin: 0;
+						}
+					}
+				}
+
+				.content-left {
+					max-width: 100%;
+					.doctor-info {
+						flex-direction: column;
+					}
+				}
+
+				.content-right {
+					max-width: 100%;
+
+					.main-schedule-container {
+						.time-content {
+							.container-btn {
+								justify-content: space-around;
+
+								.choose-time {
+									min-width: 120px;
+								}
+							}
+
+							.book-free {
+								text-align: center;
+							}
+
+							.not-data {
+								img {
+									transform: translateX(-50%);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

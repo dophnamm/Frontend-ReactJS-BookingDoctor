@@ -114,28 +114,50 @@
 	}
 }
 
-// RESPONSIVE
-@media screen and (max-width: 1024px) {
+// Responsive
+// Tablet and PC
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
 	.section-content {
-		max-width: 960px;
+		max-width: 680px;
+
+		.section-header {
+			.sub-header {
+				font-size: 20px;
+			}
+
+			button {
+				font-size: 12px;
+			}
+		}
+
+		.item-block {
+			.item {
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	.slick-next,
+	.slick-prev {
+		width: 40px !important;
+		height: 40px !important;
+
+		&::before {
+			font-size: 24px !important;
+		}
+	}
+
+	.slick-next {
+		left: 55px !important;
 	}
 }
 
-@media screen and (max-width: 768px) {
+// Mobile
+@media (min-width: 30em) and (max-width: 46.1875em) {
 	.section-content {
-		max-width: 720px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.section-content {
-		max-width: 520px;
-	}
-}
-
-@media screen and (max-width: 375px) {
-	.section-content {
-		max-width: 320px;
+		max-width: 440px;
 
 		.section-header {
 			.sub-header {
@@ -143,23 +165,69 @@
 			}
 
 			button {
-				padding: 0.5rem 1rem;
-				font-size: 12px;
+				font-size: 11px;
 			}
 		}
 
-		.slick-next,
-		.slick-prev {
-			width: 30px !important;
-			height: 30px !important;
+		.item-block {
+			.item {
+				p {
+					font-size: 10px;
+				}
+			}
+		}
+	}
 
-			&::before {
-				font-size: 20px !important;
+	.slick-next,
+	.slick-prev {
+		width: 40px !important;
+		height: 40px !important;
+
+		&::before {
+			font-size: 24px !important;
+		}
+	}
+
+	.slick-next {
+		left: 55px !important;
+	}
+}
+
+// Iphone X
+@media (min-width: 23.438em) and (max-width: 29.688em) {
+	.section-content {
+		max-width: 320px;
+
+		.section-header {
+			.sub-header {
+				font-size: 14px;
+			}
+
+			button {
+				font-size: 10px;
 			}
 		}
 
-		.slick-next {
-			left: 44px !important;
+		.item-block {
+			.item {
+				p {
+					font-size: 10px;
+				}
+			}
 		}
+	}
+
+	.slick-next,
+	.slick-prev {
+		width: 35px !important;
+		height: 35px !important;
+
+		&::before {
+			font-size: 20px !important;
+		}
+	}
+
+	.slick-next {
+		left: 48px !important;
 	}
 }

@@ -1,84 +1,191 @@
 @import "../../../styles/_variables.scss";
 
-
-
 .main-schedule-container {
-    margin: 2rem 0;
+	margin: 2rem 0;
+	overflow: hidden;
 
-    .all-schedule {
-        select {
-            background-color: transparent;
-            padding         : 0.6rem 0;
-            border          : none;
-            border-bottom   : 1px solid $light-blue;
-            border-radius   : 0;
-            outline         : none;
-            text-transform  : capitalize;
-            font-size       : 16px;
-            font-weight     : 500;
+	.all-schedule {
+		select {
+			background-color: transparent;
+			padding: 0.6rem 0;
+			border: none;
+			border-bottom: 1px solid $light-blue;
+			border-radius: 0;
+			outline: none;
+			text-transform: capitalize;
+			font-size: 16px;
+			font-weight: 500;
 
-            option {
-                text-transform: capitalize;
-                font-size     : 14px;
-                color         : $light-blue;
-            }
-        }
-    }
+			option {
+				text-transform: capitalize;
+				font-size: 14px;
+				color: $light-blue;
+			}
+		}
+	}
 
-    .all-available-time {
-        height: 250px;
+	.all-available-time {
+		// height: 250px;
 
-        .text-calendar {
-            font-size    : 15px;
-            margin-bottom: 1.4rem;
-            display      : flex;
-            align-items  : center;
+		.text-calendar {
+			font-size: 15px;
+			margin-bottom: 1.4rem;
+			display: flex;
+			align-items: center;
 
-            i {
-                font-size   : 22px;
-                margin-right: 1rem;
-            }
-        }
+			i {
+				font-size: 22px;
+				margin-right: 1rem;
+			}
+		}
 
-        .time-content {
+		.time-content {
+			height: 180px;
+			.container-btn {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.8rem;
+				margin-bottom: 2rem;
 
-            .container-btn {
-                display      : flex;
-                flex-wrap    : wrap;
-                gap          : .8rem;
-                margin-bottom: 2rem;
+				.choose-time {
+					background-color: $light;
+					border-radius: 5px;
+					border: none;
+					outline: none;
+					padding: 0.6rem 1.3rem;
+					cursor: pointer;
+					transition: all 0.3s ease;
+					min-width: 170px;
 
-                .choose-time {
-                    background-color: $light;
-                    border-radius   : 5px;
-                    border          : none;
-                    outline         : none;
-                    padding         : 0.6rem 1.3rem;
-                    cursor          : pointer;
-                    transition      : all .3s ease;
-                    min-width       : 170px;
+					&:hover {
+						background-color: $light-blue;
+						color: $light;
+					}
+				}
+			}
 
-                    &:hover {
-                        background-color: $light-blue;
-                        color           : $light;
-                    }
-                }
-            }
+			.book-free {
+				i {
+					margin: 0 1rem;
+					font-size: 18px;
+				}
+			}
 
-            .book-free {
+			img {
+				width: 150px;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-80%);
+			}
+		}
+	}
+}
 
-                i {
-                    margin   : 0 1rem;
-                    font-size: 18px;
-                }
-            }
+// Responsive
+// Tablet and PC
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+	.doctor-detail-container {
+		.schedule-doctor {
+			padding: 1rem 0;
+			flex-direction: column;
 
-            img {
-                width    : 150px;
-                position : absolute;
-                left     : 50%;
-                transform: translateX(-80%);
-            }
-        }
-    }
+			.content-left,
+			.content-right {
+				max-width: 100%;
+			}
+
+			.content-left {
+				.all-available-time {
+					.time-content {
+						.container-btn {
+							.choose-time {
+								min-width: 150px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+@media (max-width: 46.1875em) {
+	.doctor-detail-container {
+		.intro-doctor {
+			flex-direction: column;
+
+			.content-left,
+			.content-right {
+				max-width: 100%;
+				overflow: hidden;
+			}
+
+			.content-right {
+				.name-doctor {
+					font-size: 28px;
+					text-align: center;
+				}
+
+				.desc-doctor {
+					span {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		.schedule-doctor {
+			padding: 1rem 0;
+			flex-direction: column;
+
+			.content-left,
+			.content-right {
+				max-width: 100%;
+			}
+
+			.content-left {
+				.main-schedule-container {
+					margin: 1rem 0;
+					.all-available-time {
+						.time-content {
+							.container-btn {
+								.choose-time {
+									min-width: 120px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.content-right {
+				.main-extra-info {
+					margin: 1rem 0;
+
+					.content-up {
+						.address-doctor {
+							font-size: 18px;
+							margin-bottom: 0.8rem;
+						}
+
+						.name-clinic,
+						.detail-address {
+							font-size: 14px;
+						}
+					}
+
+					.content-down {
+						.title-price {
+							h3,
+							span,
+							p {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

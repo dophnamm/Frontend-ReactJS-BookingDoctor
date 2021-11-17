@@ -1,4 +1,17 @@
 .section-medical-facility {
-    padding: 3.5rem 0;
-    margin-bottom: 20px;
+	padding: 3.5rem 0;
+	margin-bottom: 20px;
+}
+
+// Responsive
+// Tablet and PC
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+// Mobile
+@media (max-width: 46.1875em) {
+	.section-medical-facility {
+		padding: 1.5rem 0;
+		margin-bottom: 16px;
+	}
 }

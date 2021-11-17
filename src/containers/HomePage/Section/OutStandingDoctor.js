@@ -5,7 +5,6 @@ import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png";
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils/";
 import { withRouter } from "react-router";

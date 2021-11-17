@@ -10,7 +10,7 @@ class About extends Component {
 			<div className="section-about">
 				<div className="section-content-about">
 					<div className="about-main">
-						<div className="about-left"></div>
+						{/* <div className="about-left"></div> */}
 
 						<div className="about-right">
 							<iframe

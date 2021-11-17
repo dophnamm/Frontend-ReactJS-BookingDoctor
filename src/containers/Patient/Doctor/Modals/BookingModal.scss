@@ -1,128 +1,208 @@
 @import "../../../../styles/_variables.scss";
 
-
-
 .booking-modal-container {
+	.booking-modal-header {
+		background-color: $light-blue !important;
+		padding: 2rem !important;
+		height: 70px !important;
 
-    .booking-modal-header {
-        background-color: $light-blue !important;
-        padding         : 2rem !important;
-        height          : 70px !important;
+		.modal-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
 
-        .modal-title {
-            display        : flex;
-            align-items    : center;
-            justify-content: space-between;
-            width          : 100%;
+			.header {
+				font-size: 26px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
 
-            .header {
-                font-size     : 26px;
-                text-transform: uppercase;
-                font-weight   : 600;
-            }
+			.btn-close-modal {
+				font-size: 20px;
+				background-color: $dark-blue;
+				padding: 0rem 0.8rem;
+				border-radius: 4px;
+				color: $light;
+				cursor: pointer;
+				transition: all 0.3s ease;
 
-            .btn-close-modal {
-                font-size       : 20px;
-                background-color: $dark-blue;
-                padding         : 0rem .8rem;
-                border-radius   : 4px;
-                color           : $light;
-                cursor          : pointer;
-                transition      : all .3s ease;
+				&:hover {
+					background-color: $light;
+					color: $dark-blue;
+				}
+			}
+		}
+	}
 
-                &:hover {
-                    background-color: $light;
-                    color           : $dark-blue;
-                }
-            }
-        }
-    }
+	.modal-body {
+		padding: 0 !important;
 
-    .modal-body {
-        padding: 0 !important;
+		.header-modal-booking {
+			background-color: $light;
 
-        .header-modal-booking {
-            background-color: $light;
+			.doctor-info {
+				display: flex;
+				gap: 2rem;
+				padding: 1.5rem 2rem;
 
-            .doctor-info {
-                display: flex;
-                gap    : 2rem;
-                padding: 1.5rem 2rem;
+				.doctor-img {
+					width: 140px;
+					height: 140px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+				}
 
-                .doctor-img {
-                    width              : 140px;
-                    height             : 140px;
-                    background-repeat  : no-repeat;
-                    background-size    : cover;
-                    background-position: center;
-                }
+				.intro-doctor {
+					.booking-schedule {
+						text-transform: uppercase;
+						font-size: 20px;
+						margin-bottom: 0.8rem;
+					}
 
-                .intro-doctor {
+					.name-doctor {
+						color: $dark-blue;
+						font-size: 18px;
+						text-transform: capitalize;
+						margin-bottom: 0.3rem;
+					}
 
-                    .booking-schedule {
-                        text-transform: uppercase;
-                        font-size     : 20px;
-                        margin-bottom : .8rem;
-                    }
+					.dated-choose {
+						font-size: 15px;
+						margin-bottom: 0.3rem;
 
-                    .name-doctor {
-                        color         : $dark-blue;
-                        font-size     : 18px;
-                        text-transform: capitalize;
-                        margin-bottom : .3rem;
-                    }
+						span {
+							margin: 0 0.1rem;
+							text-transform: capitalize;
+						}
+					}
+				}
+			}
+		}
 
-                    .dated-choose {
-                        font-size    : 15px;
-                        margin-bottom: .3rem;
+		.booking-body {
+			margin: 1rem 2rem 2rem;
 
-                        span {
-                            margin        : 0 .1rem;
-                            text-transform: capitalize;
-                        }
-                    }
-                }
-            }
-        }
+			.booking-input {
+				margin-bottom: 1rem;
 
-        .booking-body {
-            margin: 1rem 2rem 2rem;
+				label {
+					font-size: 12px;
+					margin-bottom: 0.5rem;
+				}
 
-            .booking-input {
-                margin-bottom: 1rem;
+				.form-control {
+					height: 38px;
 
-                label {
-                    font-size    : 12px;
-                    margin-bottom: .5rem;
-                }
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
 
-                .form-control {
-                    height: 38px;
+	.modal-footer {
+		height: 60px !important;
 
-                    &:focus {
-                        box-shadow: none;
-                    }
-                }
-            }
-        }
+		.btn-cancel,
+		.btn-submit {
+			background-color: $light !important;
+			opacity: 1 !important;
+			color: $dark-blue;
+			cursor: pointer;
 
-    }
+			&:hover {
+				background-color: $dark-blue !important;
+				color: $light !important;
+			}
+		}
+	}
+}
 
-    .modal-footer {
-        height: 60px !important;
+// Responsive
+// Tablet and PC
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+	.booking-modal-container {
+		.modal-content {
+			.booking-modal-header {
+				.modal-title {
+					.header {
+						font-size: 21px;
+					}
+				}
+			}
+		}
 
-        .btn-cancel,
-        .btn-submit {
-            background-color: $light !important;
-            opacity         : 1 !important;
-            color           : $dark-blue;
-            cursor          : pointer;
+		.modal-body {
+			.header-modal-booking {
+				.doctor-info {
+					.intro-doctor {
+						.booking-schedule {
+							font-size: 18px;
+						}
 
-            &:hover {
-                background-color: $dark-blue !important;
-                color           : $light !important;
-            }
-        }
+						.name-doctor {
+							font-size: 16px;
+						}
 
-    }
+						.dated-choose {
+							span {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+@media (max-width: 46.1875em) {
+	.booking-modal-container {
+		.modal-content {
+			.booking-modal-header {
+				.modal-title {
+					.header {
+						font-size: 14px;
+					}
+
+					.btn-close-modal {
+						padding: 0 0.7rem;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+
+		.modal-body {
+			.header-modal-booking {
+				.doctor-info {
+					flex-direction: column;
+					.doctor-img {
+						margin: 0 auto;
+					}
+					.intro-doctor {
+						max-width: 100%;
+						.booking-schedule {
+							font-size: 16px;
+							margin-bottom: 0.5rem;
+						}
+
+						.name-doctor {
+							font-size: 16px;
+						}
+
+						.dated-choose {
+							span {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
