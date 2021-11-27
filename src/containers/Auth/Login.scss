@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Raleway:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Raleway:wght@300;500;700&display=swap");
 @import "../../styles/_variables.scss";
 
 .login-form {
-	height     : 100vh;
-	display    : flex;
-	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	display: flex;
+	font-family: "Montserrat", sans-serif;
 
 	&-container {
-		width     : 650px;
-		margin    : auto;
-		border    : 1px solid $dark-blue;
-		color     : $dark-blue;
-		transition: box-shadow .5s ease, transform .5s ease;
+		width: 650px;
+		margin: auto;
+		border: 1px solid $dark-blue;
+		color: $dark-blue;
+		transition: box-shadow 0.5s ease, transform 0.5s ease;
 
 		&:hover {
-			transform : translate(8px, -8px);
+			transform: translate(8px, -8px);
 			box-shadow: -8px 8px $dark-blue;
 		}
 	}
@@ -23,27 +23,27 @@
 		padding: 1rem;
 
 		&-header {
-			font-family   : 'Raleway', sans-serif;
-			font-size     : 80px;
+			font-family: "Raleway", sans-serif;
+			font-size: 80px;
 			text-transform: uppercase;
-			margin-bottom : 3rem;
+			margin-bottom: 3rem;
 		}
 
 		label {
-			margin-bottom: .5rem;
-			font-size    : 1.5rem;
+			margin-bottom: 0.5rem;
+			font-size: 1.5rem;
 		}
 
 		input {
-			margin-bottom   : 1.8rem;
-			padding         : 1.5rem;
-			border-radius   : 0;
-			border-color    : $dark-blue;
+			margin-bottom: 1.8rem;
+			padding: 1.5rem;
+			border-radius: 0;
+			border-color: $dark-blue;
 			background-color: transparent;
 
 			&::placeholder {
-				color  : $dark-blue;
-				opacity: .5;
+				color: $dark-blue;
+				opacity: 0.5;
 			}
 
 			&:focus {
@@ -52,24 +52,24 @@
 		}
 
 		.btn-login {
-			padding         : .5rem 4rem;
-			margin          : 2rem 0 1rem 0;
+			padding: 0.5rem 4rem;
+			margin: 2rem 0 1rem 0;
 			background-color: transparent;
-			outline         : none;
-			border          : 1px solid $dark-blue;
-			font-size       : 1.2rem;
-			float           : right;
-			color           : $dark-blue;
+			outline: none;
+			border: 1px solid $dark-blue;
+			font-size: 1.2rem;
+			float: right;
+			color: $dark-blue;
 
 			&:hover {
 				background-color: $dark-blue;
-				color           : $light;
+				color: $light;
 			}
 		}
 
 		.forgot-password {
-			cursor        : pointer;
-			padding-bottom: .4rem;
+			cursor: pointer;
+			padding-bottom: 0.4rem;
 
 			&:hover {
 				border-bottom: 1px solid $dark-blue;
@@ -77,49 +77,62 @@
 		}
 
 		.bt {
-			padding   : 1rem;
+			padding: 1rem;
 			border-top: 1px solid $light-blue;
 		}
 
 		.h2 {
-			font-family: 'Raleway', sans-serif;
+			font-family: "Raleway", sans-serif;
 		}
 
 		.social-login {
-			display        : flex;
-			align-items    : center;
+			display: flex;
+			align-items: center;
 			justify-content: center;
 
 			span {
-				border   : 1px solid $dark-blue;
-				margin   : 0 2rem;
-				padding  : .5rem 2rem;
-				width    : 200px;
-				display  : block;
+				border: 1px solid $dark-blue;
+				margin: 0 2rem;
+				padding: 0.5rem 2rem;
+				width: 200px;
+				display: block;
 				font-size: 1.3rem;
 
 				i {
 					margin-right: 1rem;
-					font-size   : 1.6rem;
+					font-size: 1.6rem;
 				}
 
 				&:hover {
 					background-color: $dark-blue;
-					color           : $light;
-					cursor          : pointer;
+					color: $light;
+					cursor: pointer;
 				}
+			}
+		}
+
+		.back-home {
+			border: none;
+			outline: none;
+			padding: 0 1rem;
+			display: block;
+			background-color: transparent;
+
+			a {
+				width: fit-content;
+				color: $dark-blue;
 			}
 		}
 	}
 }
 
-@media(max-width: 720px) {
+@media (max-width: 720px) {
 	.login-form {
 		&-container {
 			width: 360px;
 
 			&:hover {
-				transform : none;
+				transform: none;
 				box-shadow: none;
 			}
 		}
@@ -127,7 +140,7 @@
 		.login-content {
 			.social-login {
 				flex-direction: column;
-				gap           : 1rem 0;
+				gap: 1rem 0;
 
 				span {
 					width: 100%;

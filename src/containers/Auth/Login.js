@@ -10,6 +10,7 @@ import { handleLogin } from "../../services/userService";
 import { userLoginSuccess } from "../../store/actions";
 import RingLoader from "react-spinners/RingLoader";
 import LoadingOverlay from "react-loading-overlay";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
 	constructor(props) {
@@ -120,6 +121,10 @@ class Login extends Component {
 									<i className="fab fa-google-plus-square"></i>Google
 								</span>
 							</div>
+
+							<button className="back-home">
+								<Link to="/home">Go to home</Link>
+							</button>
 						</div>
 					</div>
 				</div>
